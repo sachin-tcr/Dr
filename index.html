@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -9,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
+  <!-- Fixed GitHub Pages static pathing. Assumes style.css is in an assets/css folder -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
@@ -18,7 +18,6 @@
   <a href="#home" class="navbar-brand">Dr. Aji A. Anappara</a>
   <ul class="navbar-nav">
     <li><a href="#home">Home</a></li>
-   
     <li><a href="#about">About</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
@@ -26,6 +25,12 @@
     <li><a href="#students">Students</a></li>
     <li><a href="#teaching">Teaching</a></li>
     <li><a href="#contact">Contact</a></li>
+    <!-- Added Theme Toggle Button to fix the JavaScript ReferenceError -->
+    <li>
+      <button id="themeToggle" aria-label="Toggle Theme" style="background:none; border:none; cursor:pointer; font-size:1.2rem; padding:0 0.5rem;">
+        <span class="theme-icon">☀️</span>
+      </button>
+    </li>
   </ul>
 </nav>
 
@@ -50,7 +55,8 @@
     </div>
   </div>
   <div class="hero-image-wrap">
-    <img src="{% static 'core/images/logo.jpg' %}" alt="Dr. Aji A. Anappara" class="hero-img" />
+    <!-- Updated static image path -->
+    <img src="assets/images/logo.jpg" alt="Dr. Aji A. Anappara" class="hero-img" />
   </div>
 </section>
 
@@ -130,22 +136,21 @@
   <p class="section-sub">Our group operates at the interface of nanomaterials science, device physics, and light-driven chemical processes, specializing in low-dimensional material systems for next-generation optoelectronic, ionotronic, and neuromorphic technologies.</p>
 
   <div class="research-tags-nav">
-    {% for area in research_areas %}
-    <button class="res-tag-btn">{{ area.label }}</button>
-    {% endfor %}
+    <button class="res-tag-btn active">Optoelectronics</button>
+    <button class="res-tag-btn">Nanomaterials</button>
+    <button class="res-tag-btn">Neuromorphic Devices</button>
   </div>
 
   <div class="research-grid">
-    {% for area in research_areas %}
+    <!-- Duplicate this block for each research area item -->
     <div class="research-card">
-      <img src="{% static area.image %}" alt="{{ area.label }}" />
+      <img src="assets/images/research1.jpg" alt="Optoelectronics" />
       <div class="card-body">
-        <div class="card-label">{{ area.label }}</div>
-        <div class="card-title">{{ area.title }}</div>
-        <div class="card-desc">{{ area.desc }}</div>
+        <div class="card-label">Optoelectronics</div>
+        <div class="card-title">High-Performance Photodetectors</div>
+        <div class="card-desc">Developing self-powered, high-temperature broadband photodetectors using advanced functional nanomaterials.</div>
       </div>
     </div>
-    {% endfor %}
   </div>
 </section>
 
@@ -167,17 +172,17 @@
   </div>
 
   <div class="pub-list">
-    {% for pub in publications %}
+    <!-- Duplicate this item block for your publications -->
     <div class="pub-item">
-      <div class="pub-num">#{{ pub.num }}</div>
+      <div class="pub-num">#41</div>
       <div>
-        <div class="pub-title">{{ pub.title }}</div>
-        <div class="pub-authors">{{ pub.authors }}</div>
-        <div class="pub-journal">{{ pub.journal }}</div>
-        <span class="pub-tag">{{ pub.tag }}</span>
+        <div class="pub-title">Sample Publication Title: Next Generation Ionotronics</div>
+        <div class="pub-authors">A. A. Anappara, et al.</div>
+        <div class="pub-journal">Advanced Functional Materials (2026)</div>
+        <span class="pub-tag">Devices</span>
       </div>
     </div>
-    {% endfor %}
+
     <div style="padding: 1.5rem 0; font-family: 'DM Sans', sans-serif; color: var(--text-muted); font-size: 0.9rem;">
       📌 Full list available on the <a href="https://physics.nitc.ac.in" target="_blank" style="color:var(--accent);">NITC faculty page</a>.
     </div>
@@ -195,17 +200,16 @@
     <div class="p-stat"><div class="p-stat-num">4</div><div class="p-stat-label">Published</div></div>
   </div>
 
-  {% for patent in patents %}
+  <!-- Duplicate this block for your individual patents -->
   <div class="patent-item">
     <div class="patent-header">
-      <span class="patent-status {% if patent.status == 'GRANTED' %}granted{% else %}published{% endif %}">{{ patent.status }}</span>
-      <span class="patent-year">{{ patent.year }}</span>
+      <span class="patent-status granted">GRANTED</span>
+      <span class="patent-year">2025</span>
     </div>
-    <div class="patent-title">{{ patent.title }}</div>
-    <div class="patent-appno">{{ patent.appno }}</div>
-    <div class="patent-inventors">👥 {{ patent.inventors }}</div>
+    <div class="patent-title">An Optoelectronic Device and Method of Fabrication Thereof</div>
+    <div class="patent-appno">Patent No: IN-XXXXXXXXXX</div>
+    <div class="patent-inventors">👥 Dr. Aji A. Anappara, et al.</div>
   </div>
-  {% endfor %}
 </section>
 
 <!-- ===== STUDENTS ===== -->
@@ -216,21 +220,19 @@
   <div class="students-grid">
     <div>
       <div class="students-group-title">CURRENT STUDENTS</div>
-      {% for s in current_students %}
+      <!-- Repeat this card for each active student -->
       <div class="student-card">
-        <div class="student-name">{{ s.name }}</div>
-        <div class="student-topic">{{ s.topic }}</div>
+        <div class="student-name">John Doe</div>
+        <div class="student-topic">Neuromorphic systems and high-temperature broadband photodetectors</div>
       </div>
-      {% endfor %}
     </div>
     <div>
       <div class="students-group-title">COMPLETED PHD</div>
-      {% for s in completed_students %}
+      <!-- Repeat this card for alumni -->
       <div class="student-card">
-        <div class="student-name">{{ s.name }}</div>
-        <div class="student-topic">{{ s.topic }}</div>
+        <div class="student-name">Jane Smith</div>
+        <div class="student-topic">Synthesis of low-dimensional carbon dots for light-matter interactions</div>
       </div>
-      {% endfor %}
     </div>
   </div>
 </section>
@@ -243,29 +245,25 @@
   <div class="teaching-grid">
     <div>
       <div class="course-group-title">THEORY COURSES</div>
-      {% for c in theory_courses %}
       <div class="course-item">
-        <div class="course-code">{{ c.code }}</div>
-        <div class="course-name">{{ c.name }}</div>
+        <div class="course-code">PH6001D</div>
+        <div class="course-name">Advanced Optoelectronics</div>
       </div>
-      {% endfor %}
     </div>
     <div>
       <div class="course-group-title">LABORATORY COURSES</div>
-      {% for c in lab_courses %}
       <div class="course-item">
-        <div class="course-code">{{ c.code }}</div>
-        <div class="course-name">{{ c.name }}</div>
+        <div class="course-code">PH3091D</div>
+        <div class="course-name">Solid State Physics Lab</div>
       </div>
-      {% endfor %}
     </div>
   </div>
 
   <div class="join-box">
     <h4>Join Our Research Group</h4>
-    <p><strong >Postdoctoral/Ph.D. positions:</strong></p>
+    <p><strong>Postdoctoral/Ph.D. positions:</strong></p>
     <p>Highly motivated and talented postdoctoral/doctoral aspirants are encouraged to reach out directly.</p>
-    <p><strong >B.Tech/M.Tech/M.Sc. projects:</strong></p>
+    <p><strong>B.Tech/M.Tech/M.Sc. projects:</strong></p>
     <p>Interested students from NITC can contact the group leader to discuss possible project topics.</p>
     <a href="mailto:aji@nitc.ac.in" class="btn-email">✉ Send an Email</a>
   </div>
@@ -327,7 +325,7 @@
 </footer>
 
 <script>
-  // Publication filter buttons (UI only)
+  // Publication filter buttons
   document.querySelectorAll('.pub-filter').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.pub-filter').forEach(b => b.classList.remove('active'));
@@ -343,22 +341,24 @@
     });
   });
 
-  // ===== DARK / LIGHT MODE TOGGLE =====
+  // ===== DARK / LIGHT MODE TOGGLE WITH SAFE CHECK =====
   const html = document.documentElement;
   const toggleBtn = document.getElementById('themeToggle');
-  const icon = toggleBtn.querySelector('.theme-icon');
+  
+  if (toggleBtn) {
+    const icon = toggleBtn.querySelector('.theme-icon');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    if(icon) icon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  html.setAttribute('data-theme', savedTheme);
-  icon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-
-  toggleBtn.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    icon.textContent = next === 'dark' ? '☀️' : '🌙';
-  });
+    toggleBtn.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      if(icon) icon.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  }
 
   // Smooth active nav highlight on scroll
   const sections = document.querySelectorAll('section[id]');
