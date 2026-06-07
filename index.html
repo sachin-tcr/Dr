@@ -1961,12 +1961,28 @@
   });
 
   // ===== PUBLICATION FILTER BUTTONS =====
-  document.querySelectorAll('.pub-filter').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.pub-filter').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+ document.querySelectorAll('.pub-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    document.querySelectorAll('.pub-filter').forEach(b => 
+      b.classList.remove('active')
+    );
+    btn.classList.add('active');
+
+    const category = btn.textContent.trim();
+
+    document.querySelectorAll('.pub-item').forEach(item => {
+      const tag = item.querySelector('.pub-tag').textContent.trim();
+
+      if (category.startsWith('All') || tag === category) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
     });
+
   });
+});
 
   // ===== RESEARCH TAG BUTTONS =====
   document.querySelectorAll('.res-tag-btn').forEach(btn => {
