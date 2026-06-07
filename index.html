@@ -57,8 +57,15 @@
       background: rgba(13, 15, 20, 0.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
+      /* 1. CHANGED: Make the background completely see-through */
+      background: transparent; 
+      backdrop-filter: none;
+      
+      /* 2. CHANGED: Remove the bottom separation line */
+      border-bottom: none;
     }
-    [data-theme="light"] .navbar { background: rgba(245,247,252,0.88); }
+    [data-theme="light"] .navbar { background:transparent;backdrop-filter: none;
+      border-bottom: none; }
     .navbar-brand {
       font-family: 'Playfair Display', serif;
       font-size: 1.05rem;
