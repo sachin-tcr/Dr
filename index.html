@@ -362,10 +362,10 @@
   .gallery-wrap {
     display: flex;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     height: 260px;
-    gap: 6px;
-    border-radius: 12px;
+    gap: 4px;
+    border-radius: 8px;
     overflow: hidden;
   }
 
@@ -393,10 +393,10 @@
   /* Orange glow border on active */
   .panel-border {
     position: absolute; inset: 0;
-    border-radius: 8px;
-    border: 2.5px solid transparent;
+    border-radius: 6px;
+    border: 2px solid transparent;
     pointer-events: none; z-index: 3;
-    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
   .panel.active .panel-border {
     border-color: #f97316;
@@ -410,7 +410,7 @@
     background: linear-gradient(transparent, rgba(0,0,0,0.75));
     z-index: 2;
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(4px);
     transition: opacity 0.35s ease, transform 0.35s ease;
   }
   .panel.active .label { opacity: 1; transform: translateY(0); }
