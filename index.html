@@ -2072,6 +2072,19 @@
       a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
     });
   });
+  // --------------------------------------
+  // ===== ADD THIS TO THE VERY BOTTOM OF YOUR SCRIPT =====
+  const panels = document.querySelectorAll('.panel');
+  const dots = document.querySelectorAll('.dot');
+
+  panels.forEach((panel, index) => {
+    // Activates the correct dot indicator when the cursor hovers over a card
+    panel.addEventListener('mouseenter', () => {
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) dots[index].classList.add('active');
+    });
+  });
+  // -------------------------------------------
 </script>
 </body>
 </html>
