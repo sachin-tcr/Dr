@@ -1,2095 +1,2094 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professor at the Department of Physics, NIT Calicut. Research focuses on optoelectronics, nanomaterials, photodetectors, neuromorphic devices, and light-matter interactions." />
-  <title>Dr. Aji A. Anappara | Professor, NIT Calicut</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Professor at the Department of Physics, NIT Calicut. Research focuses on optoelectronics, nanomaterials, photodetectors, neuromorphic devices, and light-matter interactions." />
+<title>Dr. Aji A. Anappara | Professor, NIT Calicut</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <style>
-    /* ===== CSS RESET & BASE ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<style>
+/* ===== CSS RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --bg: #0d0f14;
-      --bg-alt: #131720;
-      --surface: #1a1f2e;
-      --border: #252d3d;
-      --accent: #5b8dee;
-      --accent2: #7c6af0;
-      --text: #e8ecf4;
-      --text-muted: #7a87a0;
-      --text-dim: #4a5568;
-      --card-bg: #151b28;
-      --granted: #22c55e;
-      --published: #f59e0b;
-    }
-    [data-theme="light"] {
-      --bg: #f5f7fc;
-      --bg-alt: #edf0f7;
-      --surface: #ffffff;
-      --border: #d4dae8;
-      --accent: #3b6fd4;
-      --accent2: #5b47cc;
-      --text: #1a2035;
-      --text-muted: #556080;
-      --text-dim: #9ba8c0;
-      --card-bg: #ffffff;
-    }
+:root {
+--bg: #0d0f14;
+--bg-alt: #131720;
+--surface: #1a1f2e;
+--border: #252d3d;
+--accent: #5b8dee;
+--accent2: #7c6af0;
+--text: #e8ecf4;
+--text-muted: #7a87a0;
+--text-dim: #4a5568;
+--card-bg: #151b28;
+--granted: #22c55e;
+--published: #f59e0b;
+}
+[data-theme="light"] {
+--bg: #f5f7fc;
+--bg-alt: #edf0f7;
+--surface: #ffffff;
+--border: #d4dae8;
+--accent: #3b6fd4;
+--accent2: #5b47cc;
+--text: #1a2035;
+--text-muted: #556080;
+--text-dim: #9ba8c0;
+--card-bg: #ffffff;
+}
 
-    html { scroll-behavior: smooth;
-         margin: 0;
-  padding: 0;
-         }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-      .container, #about, #research, #publications {
-      width: 100%;
-      max-width: 100%; 
-      padding: 6rem 2.5rem;
-      box-sizing: border-box;
-        width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-    }
-      .about-grid, .publications-inner, .section-content {
-      max-width: 1200px;  
-      margin: 0 auto;     
-      width: 100%;
-    }
-    }
+html { scroll-behavior: smooth;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: 'DM Sans', sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.7;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+.container, #about, #research, #publications {
+width: 100%;
+max-width: 100%; 
+padding: 6rem 2.5rem;
+box-sizing: border-box;
+width: 100vw;
+max-width: 100vw;
+margin-left: calc(-50vw + 50%);
+margin-right: calc(-50vw + 50%);
+}
+.about-grid, .publications-inner, .section-content {
+max-width: 1200px;  
+margin: 0 auto;     
+width: 100%;
+}
+}
 
-    /* ===== NAVBAR ===== */
-    .navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0.9rem 2.5rem;
-      background: rgba(13, 15, 20, 0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      /* 1. CHANGED: Make the background completely see-through */
-      /* background: transparent;  */
-      backdrop-filter: none;
-      
-      /* 2. CHANGED: Remove the bottom separation line */
-      border-bottom: none;
-    }
-    [data-theme="light"] .navbar { background:transparent;backdrop-filter: none;
-      border-bottom: none; }
-    .navbar-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.01em;
-    }
-    .navbar-nav {
-      list-style: none;
-      display: flex; gap: 0.15rem; align-items: center;
-    }
-    .navbar-nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 500;
-      padding: 0.4rem 0.7rem;
-      border-radius: 6px;
-      transition: color 0.2s, background 0.2s;
-    
-   .navbar-nav a:hover { color: var(--text); background: var(--surface); }
-                        
+/* ===== NAVBAR ===== */
+.navbar {
+position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+display: flex; align-items: center; justify-content: space-between;
+padding: 0.9rem 2.5rem;
+background: rgba(13, 15, 20, 0.88);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border);
+/* 1. CHANGED: Make the background completely see-through */
+/* background: transparent;  */
+backdrop-filter: none;
 
-    /* ===== HERO ===== */
-    .hero {
-      min-height: 100vh;
-  display: flex; 
-  align-items: center;
-  padding: 9.5rem 2.5rem 4rem;
-  gap: 4rem;
-      margin-top: -3.8rem;
-  
-  /* 1. FORCE TRUE FULL VIEWPORT WIDTH */
-  position: relative;
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+/* 2. CHANGED: Remove the bottom separation line */
+border-bottom: none;
+}
+[data-theme="light"] .navbar { background:transparent;backdrop-filter: none;
+border-bottom: none; }
+.navbar-brand {
+font-family: 'Playfair Display', serif;
+font-size: 1.05rem;
+font-weight: 700;
+color: var(--text);
+text-decoration: none;
+letter-spacing: 0.01em;
+}
+.navbar-nav {
+list-style: none;
+display: flex; gap: 0.15rem; align-items: center;
+}
+.navbar-nav a {
+color: var(--text-muted);
+text-decoration: none;
+font-size: 0.82rem;
+font-weight: 500;
+padding: 0.4rem 0.7rem;
+border-radius: 6px;
+transition: color 0.2s, background 0.2s;
+}
+.navbar-nav a:hover { color: var(--text); background: var(--surface); }
 
-  /* 2. BACKGROUND IMAGE & OVERLAY MATCHING SCREENSHOT 19 */
-  background: linear-gradient(rgba(10, 14, 22, .95), rgba(10, 14, 22, .95)), 
-              url('https://raw.githubusercontent.com/sachin-tcr/Dr/26b7174a1d4e2690abada23d2ad601a017864aec/hero-bg-science.png') no-repeat center center;
-  background-size: cover;
+/* ===== HERO ===== */
+.hero {
+min-height: 100vh;
+display: flex; 
+align-items: center;
+padding: 9.5rem 2.5rem 4rem;
+gap: 4rem;
+margin-top: -3.8rem;
+
+/* 1. FORCE TRUE FULL VIEWPORT WIDTH */
+position: relative;
+width: 100vw;
+max-width: 100vw;
+margin-left: calc(-50vw + 50%);
+margin-right: calc(-50vw + 50%);
+
+/* 2. BACKGROUND IMAGE & OVERLAY MATCHING SCREENSHOT 19 */
+background: linear-gradient(rgba(10, 14, 22, .95), rgba(10, 14, 22, .95)), 
+url('https://raw.githubusercontent.com/sachin-tcr/Dr/26b7174a1d4e2690abada23d2ad601a017864aec/hero-bg-science.png') no-repeat center center;
+background-size: cover;
 }
 
 /* 3. KEEP THIS CLEAN AND SEPARATE BELOW THE HERO BLOCK */
 .hero h1 span {
-  color: #38bdf8; 
+color: #38bdf8; 
 }
-    .hero-content { flex: 1; }
-    .hero-dept {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.2rem;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      font-weight: 700;
-      line-height: 1.08;
-      margin-bottom: 1.2rem;
-      color: var(--text);
-    }
-    .hero-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      line-height: 1.6;
-    }
-    .hero-tags {
-      display: flex; flex-wrap: wrap; gap: 0.5rem;
-      margin-bottom: 2.5rem;
-    }
-    .hero-tag {
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.35rem 0.85rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      background: var(--surface);
-      letter-spacing: 0.03em;
-    }
-    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary {
-      padding: 0.75rem 1.8rem;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-    .btn-outline {
-      padding: 0.75rem 1.8rem;
-      border: 1.5px solid var(--border);
-      color: var(--text);
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .btn-outline:hover { border-color: var(--accent); background: var(--surface); }
-    .hero-image-wrap {
-      flex-shrink: 0;
-      width: 280px; height: 280px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid var(--border);
-      background: var(--surface);
-    }
-    .hero-img { width: 100%; height: 100%; object-fit: cover; }
+.hero-content { flex: 1; }
+.hero-dept {
+font-size: 0.78rem;
+font-weight: 600;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--accent);
+margin-bottom: 1.2rem;
+}
+.hero h1 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(2.8rem, 6vw, 5rem);
+font-weight: 700;
+line-height: 1.08;
+margin-bottom: 1.2rem;
+color: var(--text);
+}
+.hero-subtitle {
+font-size: 1.05rem;
+color: var(--text-muted);
+margin-bottom: 2rem;
+line-height: 1.6;
+}
+.hero-tags {
+display: flex; flex-wrap: wrap; gap: 0.5rem;
+margin-bottom: 2.5rem;
+}
+.hero-tag {
+font-size: 0.75rem;
+font-weight: 600;
+padding: 0.35rem 0.85rem;
+border-radius: 999px;
+border: 1px solid var(--border);
+color: var(--text-muted);
+background: var(--surface);
+letter-spacing: 0.03em;
+}
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary {
+padding: 0.75rem 1.8rem;
+background: var(--accent);
+color: #fff;
+border-radius: 8px;
+font-weight: 600;
+font-size: 0.9rem;
+text-decoration: none;
+transition: opacity 0.2s, transform 0.2s;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-outline {
+padding: 0.75rem 1.8rem;
+border: 1.5px solid var(--border);
+color: var(--text);
+border-radius: 8px;
+font-weight: 600;
+font-size: 0.9rem;
+text-decoration: none;
+transition: border-color 0.2s, background 0.2s;
+}
+.btn-outline:hover { border-color: var(--accent); background: var(--surface); }
+.hero-image-wrap {
+flex-shrink: 0;
+width: 280px; height: 280px;
+border-radius: 50%;
+overflow: hidden;
+border: 3px solid var(--border);
+background: var(--surface);
+}
+.hero-img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* ===== SECTIONS ===== */
-    .section { padding: 5rem 2.5rem; max-width: 1200px; margin: 0 auto; }
-    .section-alt { background: var(--bg-alt); max-width: 100%; }
-    .section-alt > * { max-width: 1200px; margin-left: auto; margin-right: auto; }
-    .section-alt.section { padding: 5rem 2.5rem; }
-    .section-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-    }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-      line-height: 1.15;
-    }
-    .section-sub {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 680px;
-      margin-bottom: 2.5rem;
-    }
-
-    /* ===== ABOUT ===== */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-    }
-    .about-text p { margin-bottom: 1rem; color: var(--text-muted); font-size: 0.97rem; }
-    .about-text strong { color: var(--text); }
-    .stats-row {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1rem; margin-top: 2rem;
-    }
-    .stat-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.2rem;
-      text-align: center;
-    }
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--accent);
-      line-height: 1;
-    }
-    .stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.4rem; }
-    .edu-item { margin-bottom: 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--border); }
-    .edu-degree { font-weight: 600; font-size: 0.95rem; }
-    .edu-inst { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem; }
-    .timeline { list-style: none; }
-    .timeline li {
-      position: relative;
-      padding: 0.9rem 0 0.9rem 1.5rem;
-      border-left: 2px solid var(--border);
-      margin-left: 0.5rem;
-    }
-    .timeline li::before {
-      content: '';
-      position: absolute; left: -5px; top: 1.3rem;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-    .timeline-role { font-weight: 600; font-size: 0.95rem; }
-    .timeline-org { font-size: 0.85rem; color: var(--text-muted); }
-    .timeline-period { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.15rem; }
-    @media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .stats-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ===== SECTIONS ===== */
+.section { padding: 5rem 2.5rem; max-width: 1200px; margin: 0 auto; }
+.section-alt { background: var(--bg-alt); max-width: 100%; }
+.section-alt > * { max-width: 1200px; margin-left: auto; margin-right: auto; }
+.section-alt.section { padding: 5rem 2.5rem; }
+.section-label {
+font-size: 0.72rem;
+font-weight: 700;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(--accent);
+margin-bottom: 0.6rem;
+}
+.section-title {
+font-family: 'Playfair Display', serif;
+font-size: clamp(2rem, 4vw, 3rem);
+font-weight: 700;
+margin-bottom: 1.2rem;
+line-height: 1.15;
+}
+.section-sub {
+font-size: 1rem;
+color: var(--text-muted);
+max-width: 680px;
+margin-bottom: 2.5rem;
 }
 
-    /* labpic */
+/* ===== ABOUT ===== */
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+max-width: 1200px;
+margin: 0 auto;
+width: 100%;
+}
+.about-text p { margin-bottom: 1rem; color: var(--text-muted); font-size: 0.97rem; }
+.about-text strong { color: var(--text); }
+.stats-row {
+display: grid; grid-template-columns: repeat(4, 1fr);
+gap: 1rem; margin-top: 2rem;
+}
+.stat-box {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 1.2rem;
+text-align: center;
+}
+.stat-num {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+font-weight: 700;
+color: var(--accent);
+line-height: 1;
+}
+.stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.4rem; }
+.edu-item { margin-bottom: 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--border); }
+.edu-degree { font-weight: 600; font-size: 0.95rem; }
+.edu-inst { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem; }
+.timeline { list-style: none; }
+.timeline li {
+position: relative;
+padding: 0.9rem 0 0.9rem 1.5rem;
+border-left: 2px solid var(--border);
+margin-left: 0.5rem;
+}
+.timeline li::before {
+content: '';
+position: absolute; left: -5px; top: 1.3rem;
+width: 8px; height: 8px;
+border-radius: 50%;
+background: var(--accent);
+}
+.timeline-role { font-weight: 600; font-size: 0.95rem; }
+.timeline-org { font-size: 0.85rem; color: var(--text-muted); }
+.timeline-period { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.15rem; }
+@media (max-width: 768px) {
+.about-grid {
+grid-template-columns: 1fr;
+gap: 2rem;
+}
+.stats-row {
+grid-template-columns: repeat(2, 1fr);
+}
+}
 
-    * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+/* labpic */
 
-        /* The Hero Banner Container */
-        .hero-banner {
-            position: relative;
-            width: 100%;
-            height: 450px; /* Adjust height as needed */
-            
-            /* 1. The dark blue overlay gradient */
-            /* 2. The URL pointing to your clean laboratory image */
-            background: linear-gradient(rgba(10, 25, 47, 0.5), rgba(10, 25, 47, 0.5)), 
-                        url('https://raw.githubusercontent.com/sachin-tcr/Dr/813ebdc3587bb794939ba35b15ee945e488aae01/lab-banner.png') no-repeat center center;
-            background-size: cover;
-          
-            
-            /* Centers the text content vertically */
-            display: flex;
-            align-items: center; 
-            padding-left: 10%; /* Matches the left-aligned style */
-        }
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        /* Content Wrapper */
-        .banner-content {
-            max-width: 600px;
-            color: #ffffff;
-        }
+/* The Hero Banner Container */
+.hero-banner {
+position: relative;
+width: 100%;
+height: 450px; /* Adjust height as needed */
 
-        /* Small Blue Subheading */
-        .sub-title {
-            color: #38bdf8; /* Bright blue accent */
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        /* Main Heading */
-        .main-title {
-            font-size: 2.5rem;
-            font-family: 'Georgia', serif; /* Gives it that professional, academic look */
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 8px;
-        }
-
-        /* Small Location/Department Tag */
-        .location-tag {
-            color: #94a3b8; /* Muted slate gray text */
-            font-size: 0.95rem;
-            font-weight: 400;
-        }
-    /* labpic */
-   
-    /* images */
-     * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #0d1117; display: flex; flex-direction: column;
-         align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; }
-
-  .gallery-wrap {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    height: 240px;
-    gap: 4px;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .panel {
-    position: relative;
-    flex: 1.2;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-  /* .panel.active { flex: 3.5; } */
-    .panel:hover{flex: 4.5;}
-
-  .panel img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    filter: brightness(0.5) saturate(0.6);
-    transition: filter 0.45s ease, transform 0.55s cubic-bezier(0.4,0,0.2,1);
-  }
-  .panel.active img {
-    filter: brightness(0.85) saturate(1.1);
-    transform: scale(1.04);
-  }
-
-  /* Orange glow border on active */
-  .panel-border {
-    position: absolute; inset: 0;
-    border-radius: 6px;
-    border: 2px solid transparent;
-    pointer-events: none; z-index: 3;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  .panel.active .panel-border {
-    border-color: #f97316;
-    box-shadow: 0 0 0 1px #f9731640, inset 0 0 30px #f9731618;
-  }
-
-  /* Label slides up on active */
-  .label {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    padding: 32px 16px 16px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.75));
-    z-index: 2;
-    opacity: 0;
-    transform: translateY(4px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
-  }
-  .panel.active .label { opacity: 1; transform: translateY(0); }
-
-  .label-title {
-    font-family: 'Courier New', monospace;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #fff;
-  }
-  .label-sub {
-    font-family: sans-serif;
-    font-size: 11px; color: rgba(255,255,255,0.55);
-    margin-top: 4px; letter-spacing: 0.04em;
-  }
-
-  /* Dot indicators */
-  .dots {
-    display: flex; gap: 7px; margin-top: 16px;
-  }
-  .dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: rgba(255,255,255,0.2); cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-  }
-  .dot.active { background: #f97316; transform: scale(1.4); }
+/* 1. The dark blue overlay gradient */
+/* 2. The URL pointing to your clean laboratory image */
+background: linear-gradient(rgba(10, 25, 47, 0.5), rgba(10, 25, 47, 0.5)), 
+url('https://raw.githubusercontent.com/sachin-tcr/Dr/813ebdc3587bb794939ba35b15ee945e488aae01/lab-banner.png') no-repeat center center;
+background-size: cover;
 
 
-    /* images */
+/* Centers the text content vertically */
+display: flex;
+align-items: center; 
+padding-left: 10%; /* Matches the left-aligned style */
+}
 
-    /* ===== RESEARCH ===== */
-    .research-tags-nav {
-      display: flex; gap: 0.6rem; flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-    .res-tag-btn {
-      padding: 0.45rem 1.1rem;
-      border-radius: 999px;
-      border: 1.5px solid var(--border);
-      background: none;
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .res-tag-btn.active, .res-tag-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--surface);
-    }
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    .research-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .research-card:hover { transform: translateY(-3px); border-color: var(--accent); }
-    .research-card img {
-      width: 100%; height: 160px;
-      object-fit: cover;
-      background: var(--surface);
-    }
-    .card-body { padding: 1.3rem; }
-    .card-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
-    }
-    .card-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
-    .card-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+/* Content Wrapper */
+.banner-content {
+max-width: 600px;
+color: #ffffff;
+}
 
-    /* ===== PUBLICATIONS ===== */
-    .pub-filters {
-      display: flex; flex-wrap: wrap; gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-    .pub-filter {
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      border: 1.5px solid var(--border);
-      background: none;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      transition: all 0.2s;
-    }
-    .pub-filter.active, .pub-filter:hover {
-      border-color: var(--accent); color: var(--accent); background: var(--surface);
-    }
-    .pub-list { display: flex; flex-direction: column; gap: 0; }
-    .pub-item {
-      display: flex; gap: 1.5rem; align-items: flex-start;
-      padding: 1.4rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .pub-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-dim);
-      min-width: 2.5rem;
-      padding-top: 0.1rem;
-    }
-    .pub-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; line-height: 1.5; }
-    .pub-authors { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 0.25rem; }
-    .pub-journal { font-size: 0.83rem; color: var(--accent); font-style: italic; margin-bottom: 0.4rem; }
-    .pub-tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-    }
+/* Small Blue Subheading */
+.sub-title {
+color: #38bdf8; /* Bright blue accent */
+font-size: 0.85rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: 700;
+margin-bottom: 12px;
+}
 
-    /* ===== PATENTS ===== */
-    .patents-stats {
-      display: flex; gap: 2rem; margin-bottom: 2.5rem;
-    }
-    .p-stat {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.5rem 2rem;
-      text-align: center;
-    }
-    .p-stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-    .p-stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; }
-    .patent-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.4rem 1.6rem;
-      margin-bottom: 1rem;
-    }
-    .patent-header {
-      display: flex; align-items: center; gap: 0.8rem;
-      margin-bottom: 0.6rem;
-    }
-    .patent-status {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.25rem 0.7rem;
-      border-radius: 4px;
-    }
-    .patent-status.granted { background: rgba(34,197,94,0.12); color: var(--granted); }
-    .patent-status.published { background: rgba(245,158,11,0.12); color: var(--published); }
-    .patent-year { font-size: 0.8rem; color: var(--text-dim); margin-left: auto; }
-    .patent-title { font-weight: 600; font-size: 0.93rem; margin-bottom: 0.4rem; line-height: 1.5; }
-    .patent-appno { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.3rem; font-family: monospace; }
-    .patent-inventors { font-size: 0.82rem; color: var(--text-muted); }
+/* Main Heading */
+.main-title {
+font-size: 2.5rem;
+font-family: 'Georgia', serif; /* Gives it that professional, academic look */
+font-weight: 600;
+line-height: 1.2;
+margin-bottom: 8px;
+}
 
-    /* ===== STUDENTS ===== */
-    .students-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-    }
-    .students-group-title {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 1.2rem;
-    }
-    .student-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.2rem 1.4rem;
-      margin-bottom: 0.9rem;
-      transition: border-color 0.2s;
-    }
-    .student-card:hover { border-color: var(--accent); }
-    .student-name { font-weight: 600; font-size: 0.93rem; margin-bottom: 0.3rem; }
-    .student-topic { font-size: 0.83rem; color: var(--text-muted); line-height: 1.5; }
-    .student-note { font-size: 0.75rem; color: var(--accent); margin-top: 0.3rem; font-style: italic; }
+/* Small Location/Department Tag */
+.location-tag {
+color: #94a3b8; /* Muted slate gray text */
+font-size: 0.95rem;
+font-weight: 400;
+}
+/* labpic */
 
-    /* ===== TEACHING ===== */
-    .teaching-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-      margin-bottom: 3rem;
-    }
-    .course-group-title {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 1.2rem;
-    }
-    .course-item {
-      display: flex; gap: 1rem; align-items: baseline;
-      padding: 0.85rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .course-code {
-      font-family: monospace;
-      font-size: 0.8rem;
-      color: var(--accent);
-      font-weight: 700;
-      min-width: 80px;
-    }
-    .course-name { font-size: 0.92rem; }
-    .join-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem 2.5rem;
-      max-width: 640px;
-    }
-    .join-box h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-    .join-box p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.8rem; }
-    .join-box strong { color: var(--text); }
-    .btn-email {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.7rem 1.6rem;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.88rem;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .btn-email:hover { opacity: 0.85; }
+/* images */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0d1117; display: flex; flex-direction: column;
+align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; }
 
-    /* ===== CONTACT ===== */
-    .contact-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-    }
-    .contact-item {
-      display: flex; gap: 1rem; align-items: flex-start;
-      margin-bottom: 1.6rem;
-    }
-    .contact-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
-    .contact-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 0.3rem;
-    }
-    .contact-val { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; }
-    .contact-val a { color: var(--accent); text-decoration: none; }
-    .contact-val a:hover { text-decoration: underline; }
-    .funding-note {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      padding: 1rem 1.2rem;
-      border-left: 3px solid var(--accent);
-      background: var(--surface);
-      border-radius: 0 8px 8px 0;
-      margin-top: 1rem;
-    }
-    .contact-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem 2.5rem;
-    }
-    .contact-box h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-    .contact-box p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.8rem; }
+.gallery-wrap {
+display: flex;
+width: 100%;
+max-width: 1200px;
+height: 240px;
+gap: 4px;
+border-radius: 8px;
+overflow: hidden;
+}
 
-    /* ===== FOOTER ===== */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.82rem;
-      color: var(--text-dim);
-      border-top: 1px solid var(--border);
-    }
+.panel {
+position: relative;
+flex: 1.2;
+overflow: hidden;
+cursor: pointer;
+border-radius: 6px;
+transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+/* .panel.active { flex: 3.5; } */
+.panel:hover{flex: 4.5;}
 
-    /* ===== HAMBURGER MENU ===== */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 6px;
-      border-radius: 6px;
-      transition: background 0.2s;
-      z-index: 200;
-    }
-    .nav-hamburger:hover { background: var(--surface); }
-    .nav-hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--text);
-      border-radius: 2px;
-      transition: transform 0.3s, opacity 0.3s;
-    }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.panel img {
+width: 100%; height: 100%;
+object-fit: cover; display: block;
+filter: brightness(0.5) saturate(0.6);
+transition: filter 0.45s ease, transform 0.55s cubic-bezier(0.4,0,0.2,1);
+}
+.panel.active img {
+filter: brightness(0.85) saturate(1.1);
+transform: scale(1.04);
+}
 
-    /* Mobile nav drawer */
-    .mobile-nav-overlay {
-      display: none;
-      position: fixed; inset: 0; z-index: 90;
-      background: rgba(0,0,0,0.5);
-    }
-    .mobile-nav-overlay.open { display: block; }
-    .mobile-nav-drawer {
-      position: fixed;
-      top: 0; right: -100%; bottom: 0;
-      width: min(280px, 85vw);
-      background: var(--bg);
-      border-left: 1px solid var(--border);
-      z-index: 150;
-      transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
-      padding: 5rem 1.5rem 2rem;
-      display: flex; flex-direction: column; gap: 0.25rem;
-      overflow-y: auto;
-    }
-    .mobile-nav-drawer.open { right: 0; }
-    .mobile-nav-drawer a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      transition: color 0.2s, background 0.2s;
-      display: block;
-    }
-    .mobile-nav-drawer a:hover { color: var(--text); background: var(--surface); }
-    .mobile-nav-drawer .drawer-theme {
-      margin-top: auto;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      display: flex; align-items: center; gap: 0.75rem;
-      font-size: 0.88rem; color: var(--text-muted);
-    }
-    .mobile-nav-drawer .drawer-theme button {
-      background: none; border: 1.5px solid var(--border);
-      border-radius: 8px; cursor: pointer;
-      font-size: 1.1rem; padding: 0.4rem 0.7rem;
-      transition: border-color 0.2s;
-    }
-    .mobile-nav-drawer .drawer-theme button:hover { border-color: var(--accent); }
+/* Orange glow border on active */
+.panel-border {
+position: absolute; inset: 0;
+border-radius: 6px;
+border: 2px solid transparent;
+pointer-events: none; z-index: 3;
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.panel.active .panel-border {
+border-color: #f97316;
+box-shadow: 0 0 0 1px #f9731640, inset 0 0 30px #f9731618;
+}
 
-    /* ===== TABLET (≤ 1024px) ===== */
-    @media (max-width: 1024px) {
-      .hero { padding: 7rem 1.8rem 3rem; gap: 2.5rem; }
-      .section { padding: 4rem 1.8rem; }
-      .section-alt.section { padding: 4rem 1.8rem; }
-      .about-grid { gap: 2.5rem; }
-    }
+/* Label slides up on active */
+.label {
+position: absolute; bottom: 0; left: 0; right: 0;
+padding: 32px 16px 16px;
+background: linear-gradient(transparent, rgba(0,0,0,0.75));
+z-index: 2;
+opacity: 0;
+transform: translateY(4px);
+transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.panel.active .label { opacity: 1; transform: translateY(0); }
 
-    /* ===== MOBILE (≤ 768px) ===== */
-    @media (max-width: 768px) {
-      /* Navbar */
-      .navbar { padding: 0.75rem 1.2rem; }
-      .navbar-nav { display: none; }
-      .nav-hamburger { display: flex; }
+.label-title {
+font-family: 'Courier New', monospace;
+font-size: 11px; font-weight: 700;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #fff;
+}
+.label-sub {
+font-family: sans-serif;
+font-size: 11px; color: rgba(255,255,255,0.55);
+margin-top: 4px; letter-spacing: 0.04em;
+}
 
-      /* Hero — stack vertically, image on top */
-      .hero {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 5.5rem 1.2rem 3rem;
-        min-height: auto;
-        gap: 1.8rem;
-      }
-      .hero-image-wrap {
-        width: 160px; height: 160px;
-        order: -1;
-      }
-      .hero-content { width: 100%; }
-      .hero h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
-      .hero-subtitle { font-size: 0.95rem; }
-      .hero-tags { justify-content: center; }
-      .hero-btns { justify-content: center; }
-      .btn-primary, .btn-outline {
-        padding: 0.7rem 1.4rem;
-        font-size: 0.85rem;
-      }
+/* Dot indicators */
+.dots {
+display: flex; gap: 7px; margin-top: 16px;
+}
+.dot {
+width: 6px; height: 6px; border-radius: 50%;
+background: rgba(255,255,255,0.2); cursor: pointer;
+transition: background 0.3s, transform 0.3s;
+}
+.dot.active { background: #f97316; transform: scale(1.4); }
 
-      /* Sections */
-      .section { padding: 3rem 1.2rem; }
-      .section-alt.section { padding: 3rem 1.2rem; }
-      .section-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
-      .section-sub { font-size: 0.92rem; margin-bottom: 1.8rem; }
 
-      /* About */
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-      .stat-box { padding: 1rem; }
-      .stat-num { font-size: 1.6rem; }
+/* images */
 
-      /* Research */
-      .research-grid { grid-template-columns: 1fr; }
-      .research-tags-nav { gap: 0.4rem; }
-      .res-tag-btn { font-size: 0.78rem; padding: 0.38rem 0.85rem; }
+/* ===== RESEARCH ===== */
+.research-tags-nav {
+display: flex; gap: 0.6rem; flex-wrap: wrap;
+margin-bottom: 2rem;
+}
+.res-tag-btn {
+padding: 0.45rem 1.1rem;
+border-radius: 999px;
+border: 1.5px solid var(--border);
+background: none;
+color: var(--text-muted);
+font-size: 0.82rem;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.2s;
+font-family: 'DM Sans', sans-serif;
+}
+.res-tag-btn.active, .res-tag-btn:hover {
+border-color: var(--accent);
+color: var(--accent);
+background: var(--surface);
+}
+.research-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 1.5rem;
+}
+.research-card {
+background: var(--card-bg);
+border: 1px solid var(--border);
+border-radius: 12px;
+overflow: hidden;
+transition: transform 0.2s, border-color 0.2s;
+}
+.research-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.research-card img {
+width: 100%; height: 160px;
+object-fit: cover;
+background: var(--surface);
+}
+.card-body { padding: 1.3rem; }
+.card-label {
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--accent);
+margin-bottom: 0.4rem;
+}
+.card-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
+.card-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
 
-      /* Publications */
-      .pub-item { gap: 0.8rem; padding: 1.1rem 0; }
-      .pub-num { min-width: 2rem; font-size: 0.88rem; }
-      .pub-title { font-size: 0.88rem; }
-      .pub-authors { font-size: 0.78rem; }
-      .pub-journal { font-size: 0.78rem; }
-      .pub-filters { gap: 0.4rem; }
-      .pub-filter { font-size: 0.74rem; padding: 0.35rem 0.7rem; }
+/* ===== PUBLICATIONS ===== */
+.pub-filters {
+display: flex; flex-wrap: wrap; gap: 0.5rem;
+margin-bottom: 2rem;
+}
+.pub-filter {
+padding: 0.4rem 1rem;
+border-radius: 999px;
+border: 1.5px solid var(--border);
+background: none;
+color: var(--text-muted);
+font-size: 0.8rem;
+font-weight: 600;
+cursor: pointer;
+font-family: 'DM Sans', sans-serif;
+transition: all 0.2s;
+}
+.pub-filter.active, .pub-filter:hover {
+border-color: var(--accent); color: var(--accent); background: var(--surface);
+}
+.pub-list { display: flex; flex-direction: column; gap: 0; }
+.pub-item {
+display: flex; gap: 1.5rem; align-items: flex-start;
+padding: 1.4rem 0;
+border-bottom: 1px solid var(--border);
+}
+.pub-num {
+font-family: 'Playfair Display', serif;
+font-size: 1rem;
+font-weight: 700;
+color: var(--text-dim);
+min-width: 2.5rem;
+padding-top: 0.1rem;
+}
+.pub-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; line-height: 1.5; }
+.pub-authors { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+.pub-journal { font-size: 0.83rem; color: var(--accent); font-style: italic; margin-bottom: 0.4rem; }
+.pub-tag {
+display: inline-block;
+font-size: 0.68rem;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+padding: 0.2rem 0.6rem;
+border-radius: 4px;
+background: var(--surface);
+border: 1px solid var(--border);
+color: var(--text-muted);
+}
 
-      /* Patents */
-      .patents-stats { gap: 0.75rem; flex-wrap: wrap; }
-      .p-stat { padding: 1rem 1.5rem; flex: 1 1 calc(33% - 0.75rem); min-width: 80px; }
-      .p-stat-num { font-size: 1.8rem; }
-      .patent-item { padding: 1.1rem 1.2rem; }
-      .patent-title { font-size: 0.87rem; }
-      .patent-appno { font-size: 0.75rem; word-break: break-all; }
+/* ===== PATENTS ===== */
+.patents-stats {
+display: flex; gap: 2rem; margin-bottom: 2.5rem;
+}
+.p-stat {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 1.5rem 2rem;
+text-align: center;
+}
+.p-stat-num {
+font-family: 'Playfair Display', serif;
+font-size: 2.5rem;
+font-weight: 700;
+color: var(--accent);
+}
+.p-stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; }
+.patent-item {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 1.4rem 1.6rem;
+margin-bottom: 1rem;
+}
+.patent-header {
+display: flex; align-items: center; gap: 0.8rem;
+margin-bottom: 0.6rem;
+}
+.patent-status {
+font-size: 0.68rem;
+font-weight: 700;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+padding: 0.25rem 0.7rem;
+border-radius: 4px;
+}
+.patent-status.granted { background: rgba(34,197,94,0.12); color: var(--granted); }
+.patent-status.published { background: rgba(245,158,11,0.12); color: var(--published); }
+.patent-year { font-size: 0.8rem; color: var(--text-dim); margin-left: auto; }
+.patent-title { font-weight: 600; font-size: 0.93rem; margin-bottom: 0.4rem; line-height: 1.5; }
+.patent-appno { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.3rem; font-family: monospace; }
+.patent-inventors { font-size: 0.82rem; color: var(--text-muted); }
 
-      /* Students */
-      .students-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+/* ===== STUDENTS ===== */
+.students-grid {
+display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+}
+.students-group-title {
+font-size: 0.72rem;
+font-weight: 700;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(--text-dim);
+margin-bottom: 1.2rem;
+}
+.student-card {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 1.2rem 1.4rem;
+margin-bottom: 0.9rem;
+transition: border-color 0.2s;
+}
+.student-card:hover { border-color: var(--accent); }
+.student-name { font-weight: 600; font-size: 0.93rem; margin-bottom: 0.3rem; }
+.student-topic { font-size: 0.83rem; color: var(--text-muted); line-height: 1.5; }
+.student-note { font-size: 0.75rem; color: var(--accent); margin-top: 0.3rem; font-style: italic; }
 
-      /* Teaching */
-      .teaching-grid { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-      .join-box { padding: 1.5rem; max-width: 100%; }
-      .join-box h4 { font-size: 1.2rem; }
+/* ===== TEACHING ===== */
+.teaching-grid {
+display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+margin-bottom: 3rem;
+}
+.course-group-title {
+font-size: 0.72rem;
+font-weight: 700;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(--text-dim);
+margin-bottom: 1.2rem;
+}
+.course-item {
+display: flex; gap: 1rem; align-items: baseline;
+padding: 0.85rem 0;
+border-bottom: 1px solid var(--border);
+}
+.course-code {
+font-family: monospace;
+font-size: 0.8rem;
+color: var(--accent);
+font-weight: 700;
+min-width: 80px;
+}
+.course-name { font-size: 0.92rem; }
+.join-box {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 2rem 2.5rem;
+max-width: 640px;
+}
+.join-box h4 {
+font-family: 'Playfair Display', serif;
+font-size: 1.4rem;
+margin-bottom: 1rem;
+}
+.join-box p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.8rem; }
+.join-box strong { color: var(--text); }
+.btn-email {
+display: inline-block;
+margin-top: 0.5rem;
+padding: 0.7rem 1.6rem;
+background: var(--accent);
+color: #fff;
+border-radius: 8px;
+font-weight: 600;
+font-size: 0.88rem;
+text-decoration: none;
+transition: opacity 0.2s;
+}
+.btn-email:hover { opacity: 0.85; }
 
-      /* Contact */
-      .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-      .contact-box { padding: 1.5rem; }
-      .contact-box h4 { font-size: 1.2rem; }
+/* ===== CONTACT ===== */
+.contact-grid {
+display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+}
+.contact-item {
+display: flex; gap: 1rem; align-items: flex-start;
+margin-bottom: 1.6rem;
+}
+.contact-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+.contact-label {
+font-size: 0.68rem;
+font-weight: 700;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--text-dim);
+margin-bottom: 0.3rem;
+}
+.contact-val { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; }
+.contact-val a { color: var(--accent); text-decoration: none; }
+.contact-val a:hover { text-decoration: underline; }
+.funding-note {
+font-size: 0.85rem;
+color: var(--text-muted);
+padding: 1rem 1.2rem;
+border-left: 3px solid var(--accent);
+background: var(--surface);
+border-radius: 0 8px 8px 0;
+margin-top: 1rem;
+}
+.contact-box {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 2rem 2.5rem;
+}
+.contact-box h4 {
+font-family: 'Playfair Display', serif;
+font-size: 1.4rem;
+margin-bottom: 1rem;
+}
+.contact-box p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.8rem; }
 
-      /* Footer */
-      footer { font-size: 0.75rem; padding: 1.5rem 1.2rem; line-height: 1.6; }
-    }
+/* ===== FOOTER ===== */
+footer {
+text-align: center;
+padding: 2rem;
+font-size: 0.82rem;
+color: var(--text-dim);
+border-top: 1px solid var(--border);
+}
 
-    /* ===== SMALL PHONES (≤ 400px) ===== */
-    @media (max-width: 400px) {
-      .hero-image-wrap { width: 130px; height: 130px; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); }
-      .patents-stats { flex-direction: column; }
-      .p-stat { flex: none; width: 100%; }
-      .hero-btns { flex-direction: column; align-items: center; }
-      .btn-primary, .btn-outline { width: 100%; text-align: center; }
-    }
+/* ===== HAMBURGER MENU ===== */
+.nav-hamburger {
+display: none;
+flex-direction: column;
+justify-content: center;
+gap: 5px;
+background: none;
+border: none;
+cursor: pointer;
+padding: 6px;
+border-radius: 6px;
+transition: background 0.2s;
+z-index: 200;
+}
+.nav-hamburger:hover { background: var(--surface); }
+.nav-hamburger span {
+display: block;
+width: 22px;
+height: 2px;
+background: var(--text);
+border-radius: 2px;
+transition: transform 0.3s, opacity 0.3s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* Touch-friendly tap targets */
-    @media (hover: none) {
-      .research-card:hover { transform: none; }
-      .student-card:hover { border-color: var(--border); }
-    }
-  </style>
+/* Mobile nav drawer */
+.mobile-nav-overlay {
+display: none;
+position: fixed; inset: 0; z-index: 90;
+background: rgba(0,0,0,0.5);
+}
+.mobile-nav-overlay.open { display: block; }
+.mobile-nav-drawer {
+position: fixed;
+top: 0; right: -100%; bottom: 0;
+width: min(280px, 85vw);
+background: var(--bg);
+border-left: 1px solid var(--border);
+z-index: 150;
+transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
+padding: 5rem 1.5rem 2rem;
+display: flex; flex-direction: column; gap: 0.25rem;
+overflow-y: auto;
+}
+.mobile-nav-drawer.open { right: 0; }
+.mobile-nav-drawer a {
+color: var(--text-muted);
+text-decoration: none;
+font-size: 1rem;
+font-weight: 500;
+padding: 0.75rem 1rem;
+border-radius: 8px;
+transition: color 0.2s, background 0.2s;
+display: block;
+}
+.mobile-nav-drawer a:hover { color: var(--text); background: var(--surface); }
+.mobile-nav-drawer .drawer-theme {
+margin-top: auto;
+padding-top: 1.5rem;
+border-top: 1px solid var(--border);
+display: flex; align-items: center; gap: 0.75rem;
+font-size: 0.88rem; color: var(--text-muted);
+}
+.mobile-nav-drawer .drawer-theme button {
+background: none; border: 1.5px solid var(--border);
+border-radius: 8px; cursor: pointer;
+font-size: 1.1rem; padding: 0.4rem 0.7rem;
+transition: border-color 0.2s;
+}
+.mobile-nav-drawer .drawer-theme button:hover { border-color: var(--accent); }
+
+/* ===== TABLET (≤ 1024px) ===== */
+@media (max-width: 1024px) {
+.hero { padding: 7rem 1.8rem 3rem; gap: 2.5rem; }
+.section { padding: 4rem 1.8rem; }
+.section-alt.section { padding: 4rem 1.8rem; }
+.about-grid { gap: 2.5rem; }
+}
+
+/* ===== MOBILE (≤ 768px) ===== */
+@media (max-width: 768px) {
+/* Navbar */
+.navbar { padding: 0.75rem 1.2rem; }
+.navbar-nav { display: none; }
+.nav-hamburger { display: flex; }
+
+/* Hero — stack vertically, image on top */
+.hero {
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding: 5.5rem 1.2rem 3rem;
+min-height: auto;
+gap: 1.8rem;
+}
+.hero-image-wrap {
+width: 160px; height: 160px;
+order: -1;
+}
+.hero-content { width: 100%; }
+.hero h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
+.hero-subtitle { font-size: 0.95rem; }
+.hero-tags { justify-content: center; }
+.hero-btns { justify-content: center; }
+.btn-primary, .btn-outline {
+padding: 0.7rem 1.4rem;
+font-size: 0.85rem;
+}
+
+/* Sections */
+.section { padding: 3rem 1.2rem; }
+.section-alt.section { padding: 3rem 1.2rem; }
+.section-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+.section-sub { font-size: 0.92rem; margin-bottom: 1.8rem; }
+
+/* About */
+.about-grid { grid-template-columns: 1fr; gap: 2rem; }
+.stats-row { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+.stat-box { padding: 1rem; }
+.stat-num { font-size: 1.6rem; }
+
+/* Research */
+.research-grid { grid-template-columns: 1fr; }
+.research-tags-nav { gap: 0.4rem; }
+.res-tag-btn { font-size: 0.78rem; padding: 0.38rem 0.85rem; }
+
+/* Publications */
+.pub-item { gap: 0.8rem; padding: 1.1rem 0; }
+.pub-num { min-width: 2rem; font-size: 0.88rem; }
+.pub-title { font-size: 0.88rem; }
+.pub-authors { font-size: 0.78rem; }
+.pub-journal { font-size: 0.78rem; }
+.pub-filters { gap: 0.4rem; }
+.pub-filter { font-size: 0.74rem; padding: 0.35rem 0.7rem; }
+
+/* Patents */
+.patents-stats { gap: 0.75rem; flex-wrap: wrap; }
+.p-stat { padding: 1rem 1.5rem; flex: 1 1 calc(33% - 0.75rem); min-width: 80px; }
+.p-stat-num { font-size: 1.8rem; }
+.patent-item { padding: 1.1rem 1.2rem; }
+.patent-title { font-size: 0.87rem; }
+.patent-appno { font-size: 0.75rem; word-break: break-all; }
+
+/* Students */
+.students-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+/* Teaching */
+.teaching-grid { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+.join-box { padding: 1.5rem; max-width: 100%; }
+.join-box h4 { font-size: 1.2rem; }
+
+/* Contact */
+.contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+.contact-box { padding: 1.5rem; }
+.contact-box h4 { font-size: 1.2rem; }
+
+/* Footer */
+footer { font-size: 0.75rem; padding: 1.5rem 1.2rem; line-height: 1.6; }
+}
+
+/* ===== SMALL PHONES (≤ 400px) ===== */
+@media (max-width: 400px) {
+.hero-image-wrap { width: 130px; height: 130px; }
+.stats-row { grid-template-columns: repeat(2, 1fr); }
+.patents-stats { flex-direction: column; }
+.p-stat { flex: none; width: 100%; }
+.hero-btns { flex-direction: column; align-items: center; }
+.btn-primary, .btn-outline { width: 100%; text-align: center; }
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) {
+.research-card:hover { transform: none; }
+.student-card:hover { border-color: var(--border); }
+}
+</style>
 </head>
 <body>
 
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar">
-  <a href="#home" class="navbar-brand">Dr. Aji A. Anappara</a>
-  <ul class="navbar-nav">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#patents">Patents</a></li>
-    <li><a href="#students">Students</a></li>
-    <li><a href="#teaching">Teaching</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <!-- <li>
-      <button id="themeToggle" aria-label="Toggle Theme" style="background:none; border:none; cursor:pointer; font-size:1.2rem; padding:0 0.5rem;">
-        <span class="theme-icon">☀️</span>
-      </button>
-    </li> -->
-  </ul>
-  <!-- Hamburger (mobile only) -->
-  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+<a href="#home" class="navbar-brand">Dr. Aji A. Anappara</a>
+<ul class="navbar-nav">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#patents">Patents</a></li>
+<li><a href="#students">Students</a></li>
+<li><a href="#teaching">Teaching</a></li>
+<li><a href="#contact">Contact</a></li>
+<!-- <li>
+     <button id="themeToggle" aria-label="Toggle Theme" style="background:none; border:none; cursor:pointer; font-size:1.2rem; padding:0 0.5rem;">
+       <span class="theme-icon">☀️</span>
+     </button>
+   </li> -->
+</ul>
+<!-- Hamburger (mobile only) -->
+<button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
 </nav>
 
 <!-- Mobile overlay + drawer -->
 <div class="mobile-nav-overlay" id="mobileOverlay"></div>
 <nav class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile navigation">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
-  <a href="#patents">Patents</a>
-  <a href="#students">Students</a>
-  <a href="#teaching">Teaching</a>
-  <a href="#contact">Contact</a>
-  <!-- <div class="drawer-theme">
-    <span>Theme</span>
-    <button id="themeToggleMobile" aria-label="Toggle Theme"><span class="theme-icon-mobile">☀️</span></button>
-  </div> -->
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#publications">Publications</a>
+<a href="#patents">Patents</a>
+<a href="#students">Students</a>
+<a href="#teaching">Teaching</a>
+<a href="#contact">Contact</a>
+<!-- <div class="drawer-theme">
+   <span>Theme</span>
+   <button id="themeToggleMobile" aria-label="Toggle Theme"><span class="theme-icon-mobile">☀️</span></button>
+ </div> -->
 </nav>
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="home">
-  <div style="display: flex; width: 100%; max-width: 1200px; margin: 0 auto; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;">
-  <div class="hero-content">
-    <p class="hero-dept">Department of Physics · NIT Calicut</p>
-    <h1>Dr. Aji A.<br>Anappara</h1>
-    <p class="hero-subtitle">Professor · Photonic Materials and Devices Laboratory<br>National Institute of Technology Calicut, Kerala, India</p>
-    <div class="hero-tags">
-      <span class="hero-tag">Optoelectronics</span>
-      <span class="hero-tag">Nanomaterials</span>
-      <span class="hero-tag">Photodetectors</span>
-      <span class="hero-tag">Neuromorphic Devices</span>
-      <span class="hero-tag">Light–Matter Interaction</span>
-      <span class="hero-tag">Ionotronics</span>
-    </div>
-    <div class="hero-btns">
-      <a href="#research" class="btn-primary">Explore Research</a>
-      <a href="#publications" class="btn-outline">Publications</a>
-      <a href="#contact" class="btn-outline">Contact</a>
-    </div>
-  </div>
-  <div class="hero-image-wrap">
-    <img src="logo.jpg" alt="Dr. Aji A. Anappara" class="hero-img" />
-  </div>
+<div style="display: flex; width: 100%; max-width: 1200px; margin: 0 auto; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;">
+<div class="hero-content">
+<p class="hero-dept">Department of Physics · NIT Calicut</p>
+<h1>Dr. Aji A.<br>Anappara</h1>
+<p class="hero-subtitle">Professor · Photonic Materials and Devices Laboratory<br>National Institute of Technology Calicut, Kerala, India</p>
+<div class="hero-tags">
+<span class="hero-tag">Optoelectronics</span>
+<span class="hero-tag">Nanomaterials</span>
+<span class="hero-tag">Photodetectors</span>
+<span class="hero-tag">Neuromorphic Devices</span>
+<span class="hero-tag">Light–Matter Interaction</span>
+<span class="hero-tag">Ionotronics</span>
+</div>
+<div class="hero-btns">
+<a href="#research" class="btn-primary">Explore Research</a>
+<a href="#publications" class="btn-outline">Publications</a>
+<a href="#contact" class="btn-outline">Contact</a>
+</div>
+</div>
+<div class="hero-image-wrap">
+<img src="logo.jpg" alt="Dr. Aji A. Anappara" class="hero-img" />
+</div>
 </section>
 
 <!-- ===== ABOUT ===== -->
 <section class="section" id="about">
-  <p class="section-label">BACKGROUND</p>
-  <h2 class="section-title">About</h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>Dr. Aji A. Anappara is a <strong>Professor</strong> in the Department of Physics at the National Institute of Technology Calicut. His research focuses on <strong>advanced functional materials, optoelectronic devices, and light–matter interactions</strong>, with an emphasis on translating fundamental science into practical technologies and patented innovations.</p>
-      <p>He completed his <strong>Ph.D.</strong> under the guidance of Prof. Dr. Alessandro Tredicucci at the NEST (National Enterprise for nanoScience and nanoTechnology), <strong>Scuola Normale Superiore, Pisa, Italy</strong>.</p>
-      <p>Following his doctoral studies, he was awarded a prestigious fellowship from the <strong>Alexander von Humboldt Foundation</strong>, where he worked with Prof. Alfred Leitenstorfer and Prof. Rupert Huber at the <strong>University of Konstanz</strong>.</p>
-      <p>He joined NIT Calicut in <strong>November 2010</strong> as an Assistant Professor and is currently a Professor. He leads the <strong>Photonic Materials and Devices Laboratory</strong>, working at the interface of nanomaterials, optoelectronics, and ionotronic systems.</p>
-      <p>His work has resulted in <strong>high-impact publications, multiple patents (granted and filed), and externally funded research projects</strong>, reflecting a strong synergy between fundamental science and technological innovation.</p>
+<p class="section-label">BACKGROUND</p>
+<h2 class="section-title">About</h2>
+<div class="about-grid">
+<div class="about-text">
+<p>Dr. Aji A. Anappara is a <strong>Professor</strong> in the Department of Physics at the National Institute of Technology Calicut. His research focuses on <strong>advanced functional materials, optoelectronic devices, and light–matter interactions</strong>, with an emphasis on translating fundamental science into practical technologies and patented innovations.</p>
+<p>He completed his <strong>Ph.D.</strong> under the guidance of Prof. Dr. Alessandro Tredicucci at the NEST (National Enterprise for nanoScience and nanoTechnology), <strong>Scuola Normale Superiore, Pisa, Italy</strong>.</p>
+<p>Following his doctoral studies, he was awarded a prestigious fellowship from the <strong>Alexander von Humboldt Foundation</strong>, where he worked with Prof. Alfred Leitenstorfer and Prof. Rupert Huber at the <strong>University of Konstanz</strong>.</p>
+<p>He joined NIT Calicut in <strong>November 2010</strong> as an Assistant Professor and is currently a Professor. He leads the <strong>Photonic Materials and Devices Laboratory</strong>, working at the interface of nanomaterials, optoelectronics, and ionotronic systems.</p>
+<p>His work has resulted in <strong>high-impact publications, multiple patents (granted and filed), and externally funded research projects</strong>, reflecting a strong synergy between fundamental science and technological innovation.</p>
 
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="stat-num">41+</div>
-          <div class="stat-label">Journal Papers</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">15</div>
-          <div class="stat-label">Patents</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">PhD Students</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">15+</div>
-          <div class="stat-label">Years at NITC</div>
-        </div>
-      </div>
-    </div>
+<div class="stats-row">
+<div class="stat-box">
+<div class="stat-num">41+</div>
+<div class="stat-label">Journal Papers</div>
+</div>
+<div class="stat-box">
+<div class="stat-num">15</div>
+<div class="stat-label">Patents</div>
+</div>
+<div class="stat-box">
+<div class="stat-num">10+</div>
+<div class="stat-label">PhD Students</div>
+</div>
+<div class="stat-box">
+<div class="stat-num">15+</div>
+<div class="stat-label">Years at NITC</div>
+</div>
+</div>
+</div>
 
-    <div>
-      <p class="section-label">EDUCATION</p>
-      <div class="edu-item">
-        <div class="edu-degree">Ph.D. in Physics</div>
-        <div class="edu-inst">Scuola Normale Superiore, Pisa, Italy · 2008</div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-degree">M.Phil.</div>
-        <div class="edu-inst">Kerala University · 2003</div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-degree">M.Sc. Physics</div>
-        <div class="edu-inst">Kerala University · 2000</div>
-      </div>
+<div>
+<p class="section-label">EDUCATION</p>
+<div class="edu-item">
+<div class="edu-degree">Ph.D. in Physics</div>
+<div class="edu-inst">Scuola Normale Superiore, Pisa, Italy · 2008</div>
+</div>
+<div class="edu-item">
+<div class="edu-degree">M.Phil.</div>
+<div class="edu-inst">Kerala University · 2003</div>
+</div>
+<div class="edu-item">
+<div class="edu-degree">M.Sc. Physics</div>
+<div class="edu-inst">Kerala University · 2000</div>
+</div>
 
-      <br>
-      <p class="section-label">PROFESSIONAL EXPERIENCE</p>
-      <ul class="timeline">
-        <li>
-          <div class="timeline-role">Professor</div>
-          <div class="timeline-org">NIT Calicut</div>
-          <div class="timeline-period">2022–Present</div>
-        </li>
-        <li>
-          <div class="timeline-role">Associate Professor</div>
-          <div class="timeline-org">NIT Calicut</div>
-          <div class="timeline-period">2018–2022</div>
-        </li>
-        <li>
-          <div class="timeline-role">Assistant Professor</div>
-          <div class="timeline-org">NIT Calicut</div>
-          <div class="timeline-period">2010–2018</div>
-        </li>
-        <li>
-          <div class="timeline-role">AvH Postdoctoral Fellow</div>
-          <div class="timeline-org">University of Konstanz, Germany</div>
-          <div class="timeline-period">2008–2010</div>
-        </li>
-      </ul>
-    </div>
-  </div>
+<br>
+<p class="section-label">PROFESSIONAL EXPERIENCE</p>
+<ul class="timeline">
+<li>
+<div class="timeline-role">Professor</div>
+<div class="timeline-org">NIT Calicut</div>
+<div class="timeline-period">2022–Present</div>
+</li>
+<li>
+<div class="timeline-role">Associate Professor</div>
+<div class="timeline-org">NIT Calicut</div>
+<div class="timeline-period">2018–2022</div>
+</li>
+<li>
+<div class="timeline-role">Assistant Professor</div>
+<div class="timeline-org">NIT Calicut</div>
+<div class="timeline-period">2010–2018</div>
+</li>
+<li>
+<div class="timeline-role">AvH Postdoctoral Fellow</div>
+<div class="timeline-org">University of Konstanz, Germany</div>
+<div class="timeline-period">2008–2010</div>
+</li>
+</ul>
+</div>
+</div>
 </section>
 
 <!-- labpic -->
 
 <section class="hero-banner">
-        <div class="banner-content">
-            <div class="sub-title">Research Group</div>
-            <h1 class="main-title">Photonic Materials and<br>Devices Laboratory</h1>
-            <div class="location-tag">NIT Calicut · Department of Physics</div>
-        </div>
-    </section>
+<div class="banner-content">
+<div class="sub-title">Research Group</div>
+<h1 class="main-title">Photonic Materials and<br>Devices Laboratory</h1>
+<div class="location-tag">NIT Calicut · Department of Physics</div>
+</div>
+</section>
 
- <!-- labpic -->
+<!-- labpic -->
 
 
 
 <!-- ===== RESEARCH ===== -->
 <section class="section section-alt" id="research">
-  <p class="section-label">RESEARCH GROUP · Photonic Materials and Devices Laboratory</p>
-  <h2 class="section-title">Research Overview</h2>
-  <p class="section-sub">Our group operates at the interface of nanomaterials science, device physics, and light-driven chemical processes, specializing in low-dimensional material systems for next-generation optoelectronic, ionotronic, and neuromorphic technologies.</p>
+<p class="section-label">RESEARCH GROUP · Photonic Materials and Devices Laboratory</p>
+<h2 class="section-title">Research Overview</h2>
+<p class="section-sub">Our group operates at the interface of nanomaterials science, device physics, and light-driven chemical processes, specializing in low-dimensional material systems for next-generation optoelectronic, ionotronic, and neuromorphic technologies.</p>
 
-  <!-- images -->
+<!-- images -->
 <div class="gallery-wrap" id="gallery">
 
-  <div class="panel" data-i="0">
-    <div class="panel-border"></div>
-    <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/843ed2335766bdd68bbc772de2833bb02d69a0b1/optoelectronics.png" alt="Optoelectronics">
-    <div class="label">
-      <div class="label-title">Optoelectronics</div>
-      <div class="label-sub">NIR / VIS light interactions</div>
-    </div>
-  </div>
+<div class="panel" data-i="0">
+<div class="panel-border"></div>
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/843ed2335766bdd68bbc772de2833bb02d69a0b1/optoelectronics.png" alt="Optoelectronics">
+<div class="label">
+<div class="label-title">Optoelectronics</div>
+<div class="label-sub">NIR / VIS light interactions</div>
+</div>
+</div>
 
-  <div class="panel" data-i="0">
-    <div class="panel-border"></div>
-    <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/2d-materials.png" alt="Optoelectronics">
-    <div class="label">
-      <div class="label-title">Optoelectronics</div>
-      <div class="label-sub">NIR / VIS light interactions</div>
-    </div>
-  </div>
-  
+<div class="panel" data-i="0">
+<div class="panel-border"></div>
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/2d-materials.png" alt="Optoelectronics">
+<div class="label">
+<div class="label-title">Optoelectronics</div>
+<div class="label-sub">NIR / VIS light interactions</div>
+</div>
+</div>
 
-  <div class="panel" data-i="1">
-    <div class="panel-border"></div>
-    <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/121ec19d038e4f091acaa072335eecb1ada54d87/neuromorphic.png" alt="Neuromorphic">
-    <div class="label">
-      <div class="label-title">Neuromorphic</div>
-      <div class="label-sub">Brain-inspired circuits</div>
-    </div>
-  </div>
 
-  <div class="panel active" data-i="2">
-    <div class="panel-border"></div>
-    <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/b8a43b522fdeefb48ae0c45897d0e8c44faf09d8/catalysis.png" alt="Catalysis">
-    <div class="label">
-      <div class="label-title">Catalysis</div>
-      <div class="label-sub">Laser-driven chemical reactions</div>
-    </div>
-  </div>
+<div class="panel" data-i="1">
+<div class="panel-border"></div>
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/121ec19d038e4f091acaa072335eecb1ada54d87/neuromorphic.png" alt="Neuromorphic">
+<div class="label">
+<div class="label-title">Neuromorphic</div>
+<div class="label-sub">Brain-inspired circuits</div>
+</div>
+</div>
 
-  <div class="panel" data-i="3">
-    <div class="panel-border"></div>
-    <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/b8a43b522fdeefb48ae0c45897d0e8c44faf09d8/ionotronics.png" alt="Ionotronics">
-    <div class="label">
-      <div class="label-title">Ionotronics</div>
-      <div class="label-sub">Ion-transport devices</div>
-    </div>
-  </div>
+<div class="panel active" data-i="2">
+<div class="panel-border"></div>
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/b8a43b522fdeefb48ae0c45897d0e8c44faf09d8/catalysis.png" alt="Catalysis">
+<div class="label">
+<div class="label-title">Catalysis</div>
+<div class="label-sub">Laser-driven chemical reactions</div>
+</div>
+</div>
 
-  <div class="panel" data-i="4">
-    <div class="panel-border"></div>
-    <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/b8a43b522fdeefb48ae0c45897d0e8c44faf09d8/nanomaterials.png" alt="Nanomaterials">
-    <div class="label">
-      <div class="label-title">Nanomaterials</div>
-      <div class="label-sub">Low-dimensional systems</div>
-    </div>
-  </div>
+<div class="panel" data-i="3">
+<div class="panel-border"></div>
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/b8a43b522fdeefb48ae0c45897d0e8c44faf09d8/ionotronics.png" alt="Ionotronics">
+<div class="label">
+<div class="label-title">Ionotronics</div>
+<div class="label-sub">Ion-transport devices</div>
+</div>
+</div>
+
+<div class="panel" data-i="4">
+<div class="panel-border"></div>
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/b8a43b522fdeefb48ae0c45897d0e8c44faf09d8/nanomaterials.png" alt="Nanomaterials">
+<div class="label">
+<div class="label-title">Nanomaterials</div>
+<div class="label-sub">Low-dimensional systems</div>
+</div>
+</div>
 
 </div>
 
 <!-- <div class="dots" id="dots">
-  <div class="dot" data-i="0"></div>
-  <div class="dot" data-i="1"></div>
-  <div class="dot active" data-i="2"></div>
-  <div class="dot" data-i="3"></div>
-  <div class="dot" data-i="4"></div>
+ <div class="dot" data-i="0"></div>
+ <div class="dot" data-i="1"></div>
+ <div class="dot active" data-i="2"></div>
+ <div class="dot" data-i="3"></div>
+ <div class="dot" data-i="4"></div>
 </div> -->
 
 <script>
-  const panels = document.querySelectorAll('.panel');
-  const dots   = document.querySelectorAll('.dot');
+const panels = document.querySelectorAll('.panel');
+const dots   = document.querySelectorAll('.dot');
 
-  function activate(i) {
-    panels.forEach((p, idx) => p.classList.toggle('active', idx === i));
-    dots.forEach((d, idx)   => d.classList.toggle('active', idx === i));
-  }
+function activate(i) {
+panels.forEach((p, idx) => p.classList.toggle('active', idx === i));
+dots.forEach((d, idx)   => d.classList.toggle('active', idx === i));
+}
 
-  panels.forEach((p, i) => p.addEventListener('mouseenter', () => activate(i)));
-  dots.forEach((d, i)   => d.addEventListener('click',      () => activate(i)));
+panels.forEach((p, i) => p.addEventListener('mouseenter', () => activate(i)));
+dots.forEach((d, i)   => d.addEventListener('click',      () => activate(i)));
 
-  // Auto-cycle (pauses on hover)
-  let cur = 2;
-  const timer = setInterval(() => { cur = (cur + 1) % panels.length; activate(cur); }, 3000);
-  document.getElementById('gallery').addEventListener('mouseenter', () => clearInterval(timer));
+// Auto-cycle (pauses on hover)
+let cur = 2;
+const timer = setInterval(() => { cur = (cur + 1) % panels.length; activate(cur); }, 3000);
+document.getElementById('gallery').addEventListener('mouseenter', () => clearInterval(timer));
 </script><br>
 
- <!-- images -->
-  
-  <!-- <div class="research-tags-nav">
-    <button class="res-tag-btn active" data-filter="all">All Areas</button>
-    <button class="res-tag-btn" data-filter="optoelectronics">Optoelectronics</button>
-    <button class="res-tag-btn" data-filter="nanomaterials">Nanomaterials</button>
-    <button class="res-tag-btn" data-filter="neuromorphic">Neuromorphic Devices</button>
-    <button class="res-tag-btn" data-filter="photothermal">Photothermal</button>
-  </div> -->
+<!-- images -->
 
-  <div class="research-grid">
-    <div class="research-card" data-area="optoelectronics">
-      <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/optoelectronics.png" alt="Nanomaterials Research" class="card-image">
-      <div class="card-body">
-        <div class="card-label">Optoelectronics</div>
-        <div class="card-title">Self-Powered Broadband Photodetectors</div>
-        <div class="card-desc">Developing zero-bias, dark-current-free, broadband (UV–Vis–NIR) photodetectors on flexible and unconventional substrates including paper and polymer platforms. Supported by ANRF-ARG funding (2026–2029).</div>
-      </div>
-    </div>
+<!-- <div class="research-tags-nav">
+   <button class="res-tag-btn active" data-filter="all">All Areas</button>
+   <button class="res-tag-btn" data-filter="optoelectronics">Optoelectronics</button>
+   <button class="res-tag-btn" data-filter="nanomaterials">Nanomaterials</button>
+   <button class="res-tag-btn" data-filter="neuromorphic">Neuromorphic Devices</button>
+   <button class="res-tag-btn" data-filter="photothermal">Photothermal</button>
+ </div> -->
 
-    <div class="research-card" data-area="neuromorphic">
-      <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/neuromorphic.png" alt="Nanomaterials Research" class="card-image">
-      <div class="card-body">
-        <div class="card-label">neuromorphic</div>
-        <div class="card-title">High-Temperature Photodetectors</div>
-        <div class="card-desc">Thermally resilient photodetection devices operating reliably from room temperature to ~500°C using hybrid p–n heterojunction architectures, surpassing conventional Si and InGaAs technologies.</div>
-      </div>
-    </div>
+<div class="research-grid">
+<div class="research-card" data-area="optoelectronics">
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/optoelectronics.png" alt="Nanomaterials Research" class="card-image">
+<div class="card-body">
+<div class="card-label">Optoelectronics</div>
+<div class="card-title">Self-Powered Broadband Photodetectors</div>
+<div class="card-desc">Developing zero-bias, dark-current-free, broadband (UV–Vis–NIR) photodetectors on flexible and unconventional substrates including paper and polymer platforms. Supported by ANRF-ARG funding (2026–2029).</div>
+</div>
+</div>
 
-    <div class="research-card" data-area="Ionotronics">
-      <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/ionotronics.png" alt="Nanomaterials Research" class="card-image">
-      <div class="card-body">
-        <div class="card-label">Ionotronics</div>
-        <div class="card-title">Retinomorphic &amp; Ionotronic Synapses</div>
-        <div class="card-desc">Bio-inspired retinomorphic photodetectors and opto-ionotronic synaptic devices that emulate human visual response, enabling event-driven sensing, in-sensor processing, and neuromorphic computing.</div>
-      </div>
-    </div>
+<div class="research-card" data-area="neuromorphic">
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/neuromorphic.png" alt="Nanomaterials Research" class="card-image">
+<div class="card-body">
+<div class="card-label">neuromorphic</div>
+<div class="card-title">High-Temperature Photodetectors</div>
+<div class="card-desc">Thermally resilient photodetection devices operating reliably from room temperature to ~500°C using hybrid p–n heterojunction architectures, surpassing conventional Si and InGaAs technologies.</div>
+</div>
+</div>
 
-    <div class="research-card" data-area="catalysis">
-      <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/catalysis.png" alt="Nanomaterials Research" class="card-image">
-      <div class="card-body">
-        <div class="card-label">catalysis</div>
-        <div class="card-title">Optofluidics &amp; Analog Computing</div>
-        <div class="card-desc">Optofluidic platforms with solid-state ionic transport enabling continuous-time hardware-level differentiation and integration — opening paths toward analog computing and unconventional information processing.</div>
-      </div>
-    </div>
+<div class="research-card" data-area="Ionotronics">
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/ionotronics.png" alt="Nanomaterials Research" class="card-image">
+<div class="card-body">
+<div class="card-label">Ionotronics</div>
+<div class="card-title">Retinomorphic &amp; Ionotronic Synapses</div>
+<div class="card-desc">Bio-inspired retinomorphic photodetectors and opto-ionotronic synaptic devices that emulate human visual response, enabling event-driven sensing, in-sensor processing, and neuromorphic computing.</div>
+</div>
+</div>
 
-    <div class="research-card" data-area="2d-materials">
-      <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/2d-materials.png" alt="Nanomaterials Research" class="card-image">
-      <div class="card-body">
-        <div class="card-label">2d-materials</div>
-        <div class="card-title">Light-Driven Chemical Transformations</div>
-        <div class="card-desc">Functional nanomaterials for photothermal catalysis, light-induced polymer upcycling, and sustainable chemical transformations — with patented approaches for energy-efficient reaction engineering.</div>
-      </div>
-    </div>
+<div class="research-card" data-area="catalysis">
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/catalysis.png" alt="Nanomaterials Research" class="card-image">
+<div class="card-body">
+<div class="card-label">catalysis</div>
+<div class="card-title">Optofluidics &amp; Analog Computing</div>
+<div class="card-desc">Optofluidic platforms with solid-state ionic transport enabling continuous-time hardware-level differentiation and integration — opening paths toward analog computing and unconventional information processing.</div>
+</div>
+</div>
 
-    <div class="research-card" data-area="nanomaterials">
-      <img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/nanomaterials.png" alt="Nanomaterials Research" class="card-image">
-      <div class="card-body">
-        <div class="card-label">Nanomaterials</div>
-        <div class="card-title">Low-Dimensional &amp; Multivalent Systems</div>
-        <div class="card-desc">Structure–property studies of 2D nanosheets, carbon dots, boron-based nanostructures, carbide nanosheets, and elemental chalcogens. Exploring dimensionality-driven phase transformations and optical properties.</div>
-      </div>
-    </div>
-  </div>
+<div class="research-card" data-area="2d-materials">
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/2d-materials.png" alt="Nanomaterials Research" class="card-image">
+<div class="card-body">
+<div class="card-label">2d-materials</div>
+<div class="card-title">Light-Driven Chemical Transformations</div>
+<div class="card-desc">Functional nanomaterials for photothermal catalysis, light-induced polymer upcycling, and sustainable chemical transformations — with patented approaches for energy-efficient reaction engineering.</div>
+</div>
+</div>
+
+<div class="research-card" data-area="nanomaterials">
+<img src="https://raw.githubusercontent.com/sachin-tcr/Dr/bc1de5211e1750018007d744275f757ed397163f/nanomaterials.png" alt="Nanomaterials Research" class="card-image">
+<div class="card-body">
+<div class="card-label">Nanomaterials</div>
+<div class="card-title">Low-Dimensional &amp; Multivalent Systems</div>
+<div class="card-desc">Structure–property studies of 2D nanosheets, carbon dots, boron-based nanostructures, carbide nanosheets, and elemental chalcogens. Exploring dimensionality-driven phase transformations and optical properties.</div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- ===== PUBLICATIONS ===== -->
 <section class="section" id="publications">
-  <p class="section-label">PEER-REVIEWED</p>
-  <h2 class="section-title">Publications</h2>
-  <p class="section-sub">41 publications in peer-reviewed journals (reverse chronological order)</p>
+<p class="section-label">PEER-REVIEWED</p>
+<h2 class="section-title">Publications</h2>
+<p class="section-sub">41 publications in peer-reviewed journals (reverse chronological order)</p>
 
-  <div class="pub-filters">
-    <button class="pub-filter active">All 41</button>
-    <button class="pub-filter">Devices</button>
-    <button class="pub-filter">Materials</button>
-    <button class="pub-filter">Photonics</button>
-    <button class="pub-filter">Carbon Dots</button>
-    <button class="pub-filter">Sensing</button>
-    <button class="pub-filter">Photothermal</button>
-  </div>
+<div class="pub-filters">
+<button class="pub-filter active">All 41</button>
+<button class="pub-filter">Devices</button>
+<button class="pub-filter">Materials</button>
+<button class="pub-filter">Photonics</button>
+<button class="pub-filter">Carbon Dots</button>
+<button class="pub-filter">Sensing</button>
+<button class="pub-filter">Photothermal</button>
+</div>
 
-  <div class="pub-list">
-    <div class="pub-item">
-      <div class="pub-num">#41</div>
-      <div>
-        <div class="pub-title">Ultraviolet emission from 2D tellurium nanosheets synthesised using diverse exfoliation techniques</div>
-        <div class="pub-authors">V. M. Swathi and Aji A. Anappara</div>
-        <div class="pub-journal">Applied Physics A, 131, 844 (2025)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-list">
+<div class="pub-item">
+<div class="pub-num">#41</div>
+<div>
+<div class="pub-title">Ultraviolet emission from 2D tellurium nanosheets synthesised using diverse exfoliation techniques</div>
+<div class="pub-authors">V. M. Swathi and Aji A. Anappara</div>
+<div class="pub-journal">Applied Physics A, 131, 844 (2025)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#40</div>
-      <div>
-        <div class="pub-title">Cellulose fiber tortuosity as a bio-inspired design strategy for light-driven, self-powered ionotronic synapses</div>
-        <div class="pub-authors">Varsha Sharma and Aji A. Anappara</div>
-        <div class="pub-journal">ACS Applied Materials &amp; Interfaces, 17, 48, 65781–65792 (2025)</div>
-        <span class="pub-tag">Devices</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#40</div>
+<div>
+<div class="pub-title">Cellulose fiber tortuosity as a bio-inspired design strategy for light-driven, self-powered ionotronic synapses</div>
+<div class="pub-authors">Varsha Sharma and Aji A. Anappara</div>
+<div class="pub-journal">ACS Applied Materials &amp; Interfaces, 17, 48, 65781–65792 (2025)</div>
+<span class="pub-tag">Devices</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#39</div>
-      <div>
-        <div class="pub-title">Deciphering the crystal structure evolution from 3D non-van der Waals solids to 2D nanosheets</div>
-        <div class="pub-authors">V. M. Swathi, Anjana E Sudheer, G. Tejaswini, Muthu Vallinayagam, T. Pandiyarajan, D. Murali, Matthias Zschornak and Aji A. Anappara</div>
-        <div class="pub-journal">Journal of Materials Chemistry C, 13, 22278–22286 (2025)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#39</div>
+<div>
+<div class="pub-title">Deciphering the crystal structure evolution from 3D non-van der Waals solids to 2D nanosheets</div>
+<div class="pub-authors">V. M. Swathi, Anjana E Sudheer, G. Tejaswini, Muthu Vallinayagam, T. Pandiyarajan, D. Murali, Matthias Zschornak and Aji A. Anappara</div>
+<div class="pub-journal">Journal of Materials Chemistry C, 13, 22278–22286 (2025)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#38</div>
-      <div>
-        <div class="pub-title">Unveiling the potential photothermal activity of vanadium carbide for driving chemical reactions</div>
-        <div class="pub-authors">M. Anupama, Anjana Edathirinji Sudheer, Murali Devaraj, Pandiyarajan Thangaraj, Assa Aravindh Sasikala Devi, Aji A. Anappara</div>
-        <div class="pub-journal">Langmuir, 41, 28, 18544–18553 (2025)</div>
-        <span class="pub-tag">Photothermal</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#38</div>
+<div>
+<div class="pub-title">Unveiling the potential photothermal activity of vanadium carbide for driving chemical reactions</div>
+<div class="pub-authors">M. Anupama, Anjana Edathirinji Sudheer, Murali Devaraj, Pandiyarajan Thangaraj, Assa Aravindh Sasikala Devi, Aji A. Anappara</div>
+<div class="pub-journal">Langmuir, 41, 28, 18544–18553 (2025)</div>
+<span class="pub-tag">Photothermal</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#37</div>
-      <div>
-        <div class="pub-title">Selective etching of Aluminium towards the synthesis of AlB₂ derived aqueous dispersion of luminescent boron-based nanosheets</div>
-        <div class="pub-authors">M. Anupama, Reeja Gopalakrishnan Nair, Aji A. Anappara</div>
-        <div class="pub-journal">Applied Physics A, 131, 39 (2025)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#37</div>
+<div>
+<div class="pub-title">Selective etching of Aluminium towards the synthesis of AlB₂ derived aqueous dispersion of luminescent boron-based nanosheets</div>
+<div class="pub-authors">M. Anupama, Reeja Gopalakrishnan Nair, Aji A. Anappara</div>
+<div class="pub-journal">Applied Physics A, 131, 39 (2025)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#36</div>
-      <div>
-        <div class="pub-title">Multivalency-induced structural variations of 2D selenium nanosheets: facile solution-phase synthesis and optical properties</div>
-        <div class="pub-authors">V.M. Swathi, K. Arjun, Anju Rajan, Raghu Chathanathodi, Karthikeyan Balasubramanian, Aji A. Anappara</div>
-        <div class="pub-journal">Physical Chemistry Chemical Physics, 26, 33, 22112–22121 (2024)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#36</div>
+<div>
+<div class="pub-title">Multivalency-induced structural variations of 2D selenium nanosheets: facile solution-phase synthesis and optical properties</div>
+<div class="pub-authors">V.M. Swathi, K. Arjun, Anju Rajan, Raghu Chathanathodi, Karthikeyan Balasubramanian, Aji A. Anappara</div>
+<div class="pub-journal">Physical Chemistry Chemical Physics, 26, 33, 22112–22121 (2024)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#35</div>
-      <div>
-        <div class="pub-title">Comparative photoluminescence study of nitrogen doped carbon dots co-doped with boron and sulphur</div>
-        <div class="pub-authors">Julin Joseph, Aji A. Anappara</div>
-        <div class="pub-journal">Luminescence, 37, 9, 1481 (2022)</div>
-        <span class="pub-tag">Carbon Dots</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#35</div>
+<div>
+<div class="pub-title">Comparative photoluminescence study of nitrogen doped carbon dots co-doped with boron and sulphur</div>
+<div class="pub-authors">Julin Joseph, Aji A. Anappara</div>
+<div class="pub-journal">Luminescence, 37, 9, 1481 (2022)</div>
+<span class="pub-tag">Carbon Dots</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#34</div>
-      <div>
-        <div class="pub-title">Specific ultralow level chemorecognition using graphene-fluorophore supramolecular assembly: fine-tuning the fluorophore framework</div>
-        <div class="pub-authors">Akhila A.K., Suresh Babu A.R., Aji A. Anappara, Renuka N.K.</div>
-        <div class="pub-journal">Spectrochimica Acta Part A, 266, 120408 (2022)</div>
-        <span class="pub-tag">Sensing</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#34</div>
+<div>
+<div class="pub-title">Specific ultralow level chemorecognition using graphene-fluorophore supramolecular assembly: fine-tuning the fluorophore framework</div>
+<div class="pub-authors">Akhila A.K., Suresh Babu A.R., Aji A. Anappara, Renuka N.K.</div>
+<div class="pub-journal">Spectrochimica Acta Part A, 266, 120408 (2022)</div>
+<span class="pub-tag">Sensing</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#33</div>
-      <div>
-        <div class="pub-title">Multi-functional carbon dots for visual detection of picric acid and white-light emission</div>
-        <div class="pub-authors">Vidya T., Anupama M., Sajan M., Julin Joseph, Aji A. Anappara</div>
-        <div class="pub-journal">Materials Research Bulletin, 138, 111223 (2021)</div>
-        <span class="pub-tag">Carbon Dots</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#33</div>
+<div>
+<div class="pub-title">Multi-functional carbon dots for visual detection of picric acid and white-light emission</div>
+<div class="pub-authors">Vidya T., Anupama M., Sajan M., Julin Joseph, Aji A. Anappara</div>
+<div class="pub-journal">Materials Research Bulletin, 138, 111223 (2021)</div>
+<span class="pub-tag">Carbon Dots</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#32</div>
-      <div>
-        <div class="pub-title">Acetic acid derived carbon dots as efficient pH and bio-molecule sensor</div>
-        <div class="pub-authors">Anci V. A., Thasleena Panakkal, Aji A. Anappara, Renuka N. K.</div>
-        <div class="pub-journal">International Journal of Environmental Analytical Chemistry, 101, 506–512 (2021)</div>
-        <span class="pub-tag">Sensing</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#32</div>
+<div>
+<div class="pub-title">Acetic acid derived carbon dots as efficient pH and bio-molecule sensor</div>
+<div class="pub-authors">Anci V. A., Thasleena Panakkal, Aji A. Anappara, Renuka N. K.</div>
+<div class="pub-journal">International Journal of Environmental Analytical Chemistry, 101, 506–512 (2021)</div>
+<span class="pub-tag">Sensing</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#31</div>
-      <div>
-        <div class="pub-title">Photo-to-thermal conversion: effective utilization of futile solid-state carbon quantum dots (CQDs) for energy harvesting applications</div>
-        <div class="pub-authors">Nishaina Sahadev, Aji A. Anappara</div>
-        <div class="pub-journal">New Journal of Chemistry, 44, 25, 10662–10670 (2020)</div>
-        <span class="pub-tag">Photothermal</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#31</div>
+<div>
+<div class="pub-title">Photo-to-thermal conversion: effective utilization of futile solid-state carbon quantum dots (CQDs) for energy harvesting applications</div>
+<div class="pub-authors">Nishaina Sahadev, Aji A. Anappara</div>
+<div class="pub-journal">New Journal of Chemistry, 44, 25, 10662–10670 (2020)</div>
+<span class="pub-tag">Photothermal</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#30</div>
-      <div>
-        <div class="pub-title">Facile synthesis of aqueous-dispersed luminescent nanosheets from non-layered lanthanum hexaboride</div>
-        <div class="pub-authors">Saju K. John, Aji A. Anappara</div>
-        <div class="pub-journal">RSC Advances, 10, 31788–31789 (2020)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#30</div>
+<div>
+<div class="pub-title">Facile synthesis of aqueous-dispersed luminescent nanosheets from non-layered lanthanum hexaboride</div>
+<div class="pub-authors">Saju K. John, Aji A. Anappara</div>
+<div class="pub-journal">RSC Advances, 10, 31788–31789 (2020)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#29</div>
-      <div>
-        <div class="pub-title">Aqueous dispersion of highly luminescent boron-rich nanosheets by the exfoliation of polycrystalline titanium diboride</div>
-        <div class="pub-authors">Saju K. John, Aji A. Anappara</div>
-        <div class="pub-journal">New Journal of Chemistry, 43, 9953–9960 (2019)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#29</div>
+<div>
+<div class="pub-title">Aqueous dispersion of highly luminescent boron-rich nanosheets by the exfoliation of polycrystalline titanium diboride</div>
+<div class="pub-authors">Saju K. John, Aji A. Anappara</div>
+<div class="pub-journal">New Journal of Chemistry, 43, 9953–9960 (2019)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#28</div>
-      <div>
-        <div class="pub-title">Photothermal effect in solid-state MWCNT: Possible signatures of thermal anisotropy</div>
-        <div class="pub-authors">Nishaina Sahadev, Aji A. Anappara</div>
-        <div class="pub-journal">Journal of Applied Physics, 124, 145104 (2018)</div>
-        <span class="pub-tag">Photothermal</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#28</div>
+<div>
+<div class="pub-title">Photothermal effect in solid-state MWCNT: Possible signatures of thermal anisotropy</div>
+<div class="pub-authors">Nishaina Sahadev, Aji A. Anappara</div>
+<div class="pub-journal">Journal of Applied Physics, 124, 145104 (2018)</div>
+<span class="pub-tag">Photothermal</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#27</div>
-      <div>
-        <div class="pub-title">Tailored periodic Si nanopillar based architectures as highly sensitive universal SERS biosensing platform</div>
-        <div class="pub-authors">Prajith Karadan, Shantanu Aggarwal, Aji A. Anappara, Chandrabhas Narayana, Harish C. Barshilia</div>
-        <div class="pub-journal">Sensors and Actuators B: Chemical, 254, 264–271 (2018)</div>
-        <span class="pub-tag">Sensing</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#27</div>
+<div>
+<div class="pub-title">Tailored periodic Si nanopillar based architectures as highly sensitive universal SERS biosensing platform</div>
+<div class="pub-authors">Prajith Karadan, Shantanu Aggarwal, Aji A. Anappara, Chandrabhas Narayana, Harish C. Barshilia</div>
+<div class="pub-journal">Sensors and Actuators B: Chemical, 254, 264–271 (2018)</div>
+<span class="pub-tag">Sensing</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#26</div>
-      <div>
-        <div class="pub-title">Ellagic acid-functionalized fluorescent carbon dots for ultrasensitive and selective detection of mercuric ions via quenching</div>
-        <div class="pub-authors">Julin Joseph, Aji A. Anappara</div>
-        <div class="pub-journal">Journal of Luminescence, 192, 761–766 (2017)</div>
-        <span class="pub-tag">Carbon Dots</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#26</div>
+<div>
+<div class="pub-title">Ellagic acid-functionalized fluorescent carbon dots for ultrasensitive and selective detection of mercuric ions via quenching</div>
+<div class="pub-authors">Julin Joseph, Aji A. Anappara</div>
+<div class="pub-journal">Journal of Luminescence, 192, 761–766 (2017)</div>
+<span class="pub-tag">Carbon Dots</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#25</div>
-      <div>
-        <div class="pub-title">Enhanced photothermal effect in reduced graphene oxide in the solid-state</div>
-        <div class="pub-authors">Nishaina Sahadev, Aji A. Anappara</div>
-        <div class="pub-journal">Journal of Applied Physics, 122, 185103 (2017)</div>
-        <span class="pub-tag">Photothermal</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#25</div>
+<div>
+<div class="pub-title">Enhanced photothermal effect in reduced graphene oxide in the solid-state</div>
+<div class="pub-authors">Nishaina Sahadev, Aji A. Anappara</div>
+<div class="pub-journal">Journal of Applied Physics, 122, 185103 (2017)</div>
+<span class="pub-tag">Photothermal</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#24</div>
-      <div>
-        <div class="pub-title">Charge transport studies on Si nanopillars for photodetectors fabricated using vapor phase metal-assisted chemical etching</div>
-        <div class="pub-authors">Prajith Karadan, Santhanu Parida, Arvind Kumar, Aji A. Anappara, Sandip Dhara, Harish C. Barshilia</div>
-        <div class="pub-journal">Applied Physics A, 123, 681 (2017)</div>
-        <span class="pub-tag">Devices</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#24</div>
+<div>
+<div class="pub-title">Charge transport studies on Si nanopillars for photodetectors fabricated using vapor phase metal-assisted chemical etching</div>
+<div class="pub-authors">Prajith Karadan, Santhanu Parida, Arvind Kumar, Aji A. Anappara, Sandip Dhara, Harish C. Barshilia</div>
+<div class="pub-journal">Applied Physics A, 123, 681 (2017)</div>
+<span class="pub-tag">Devices</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#23</div>
-      <div>
-        <div class="pub-title">Magnesium diboride: An effective light-to-heat conversion material in the solid-state</div>
-        <div class="pub-authors">Saju K. John, Daughty K. John, N. Bijoy, Raghu Chathanathodi, Aji A. Anappara</div>
-        <div class="pub-journal">Applied Physics Letters, 111, 033901 (2017)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#23</div>
+<div>
+<div class="pub-title">Magnesium diboride: An effective light-to-heat conversion material in the solid-state</div>
+<div class="pub-authors">Saju K. John, Daughty K. John, N. Bijoy, Raghu Chathanathodi, Aji A. Anappara</div>
+<div class="pub-journal">Applied Physics Letters, 111, 033901 (2017)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#22</div>
-      <div>
-        <div class="pub-title">Long lifetime room-temperature phosphorescence of carbon dots in aluminum sulfate</div>
-        <div class="pub-authors">Julin Joseph and Aji A. Anappara</div>
-        <div class="pub-journal">ChemistrySelect, 2, 4058–4062 (2017)</div>
-        <span class="pub-tag">Carbon Dots</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#22</div>
+<div>
+<div class="pub-title">Long lifetime room-temperature phosphorescence of carbon dots in aluminum sulfate</div>
+<div class="pub-authors">Julin Joseph and Aji A. Anappara</div>
+<div class="pub-journal">ChemistrySelect, 2, 4058–4062 (2017)</div>
+<span class="pub-tag">Carbon Dots</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#21</div>
-      <div>
-        <div class="pub-title">Cool white, persistent room-temperature phosphorescence in carbon dots embedded in a silica gel matrix</div>
-        <div class="pub-authors">Julin Joseph and Aji A. Anappara</div>
-        <div class="pub-journal">Physical Chemistry Chemical Physics, 19, 15137–15144 (2017)</div>
-        <span class="pub-tag">Carbon Dots</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#21</div>
+<div>
+<div class="pub-title">Cool white, persistent room-temperature phosphorescence in carbon dots embedded in a silica gel matrix</div>
+<div class="pub-authors">Julin Joseph and Aji A. Anappara</div>
+<div class="pub-journal">Physical Chemistry Chemical Physics, 19, 15137–15144 (2017)</div>
+<span class="pub-tag">Carbon Dots</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#20</div>
-      <div>
-        <div class="pub-title">White-light emitting carbon dots prepared by the electrochemical exfoliation of graphite</div>
-        <div class="pub-authors">Julin Joseph and Aji A. Anappara</div>
-        <div class="pub-journal">ChemPhysChem, 18, 292–298 (2017)</div>
-        <span class="pub-tag">Carbon Dots</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#20</div>
+<div>
+<div class="pub-title">White-light emitting carbon dots prepared by the electrochemical exfoliation of graphite</div>
+<div class="pub-authors">Julin Joseph and Aji A. Anappara</div>
+<div class="pub-journal">ChemPhysChem, 18, 292–298 (2017)</div>
+<span class="pub-tag">Carbon Dots</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#19</div>
-      <div>
-        <div class="pub-title">Influence of defects on electrical properties of electrodeposited co-doped ZnO nanocoatings</div>
-        <div class="pub-authors">A. Simimol, Aji A. Anappara and Harish C. Barshilia</div>
-        <div class="pub-journal">Materials Research Express, 4, 015001 (2017)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#19</div>
+<div>
+<div class="pub-title">Influence of defects on electrical properties of electrodeposited co-doped ZnO nanocoatings</div>
+<div class="pub-authors">A. Simimol, Aji A. Anappara and Harish C. Barshilia</div>
+<div class="pub-journal">Materials Research Express, 4, 015001 (2017)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#18</div>
-      <div>
-        <div class="pub-title">Microwave-assisted hydrothermal synthesis of UV-emitting carbon dots from tannic acid</div>
-        <div class="pub-authors">Julin Joseph, Aji A. Anappara</div>
-        <div class="pub-journal">New Journal of Chemistry, 40, 8110–8117 (2016)</div>
-        <span class="pub-tag">Carbon Dots</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#18</div>
+<div>
+<div class="pub-title">Microwave-assisted hydrothermal synthesis of UV-emitting carbon dots from tannic acid</div>
+<div class="pub-authors">Julin Joseph, Aji A. Anappara</div>
+<div class="pub-journal">New Journal of Chemistry, 40, 8110–8117 (2016)</div>
+<span class="pub-tag">Carbon Dots</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#17</div>
-      <div>
-        <div class="pub-title">Evolution mechanism of mesoporous silicon nanopillars grown by metal-assisted chemical etching and nanosphere lithography</div>
-        <div class="pub-authors">Prajith Karadan, Siju John, Aji A. Anappara, Chandrabhas Narayana, Harish C. Barshilia</div>
-        <div class="pub-journal">Applied Physics A, 669, 122–132 (2016)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#17</div>
+<div>
+<div class="pub-title">Evolution mechanism of mesoporous silicon nanopillars grown by metal-assisted chemical etching and nanosphere lithography</div>
+<div class="pub-authors">Prajith Karadan, Siju John, Aji A. Anappara, Chandrabhas Narayana, Harish C. Barshilia</div>
+<div class="pub-journal">Applied Physics A, 669, 122–132 (2016)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#16</div>
-      <div>
-        <div class="pub-title">White light emission of carbon dots by creating different emissive traps</div>
-        <div class="pub-authors">Julin Joseph, Aji A. Anappara</div>
-        <div class="pub-journal">Journal of Luminescence, 178, 128–133 (2016)</div>
-        <span class="pub-tag">Carbon Dots</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#16</div>
+<div>
+<div class="pub-title">White light emission of carbon dots by creating different emissive traps</div>
+<div class="pub-authors">Julin Joseph, Aji A. Anappara</div>
+<div class="pub-journal">Journal of Luminescence, 178, 128–133 (2016)</div>
+<span class="pub-tag">Carbon Dots</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#15</div>
-      <div>
-        <div class="pub-title">Improved broadband and omnidirectional light absorption in silicon nanopillars via gradient mesoporosity induced leaky waveguide modulation</div>
-        <div class="pub-authors">Prajith Karadan, Aji A. Anappara, V.H.S. Moorthy, Chandrabhas Narayana, and Harish C. Barshilia</div>
-        <div class="pub-journal">RSC Advances, 6, 109157–109167 (2016)</div>
-        <span class="pub-tag">Devices</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#15</div>
+<div>
+<div class="pub-title">Improved broadband and omnidirectional light absorption in silicon nanopillars via gradient mesoporosity induced leaky waveguide modulation</div>
+<div class="pub-authors">Prajith Karadan, Aji A. Anappara, V.H.S. Moorthy, Chandrabhas Narayana, and Harish C. Barshilia</div>
+<div class="pub-journal">RSC Advances, 6, 109157–109167 (2016)</div>
+<span class="pub-tag">Devices</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#14</div>
-      <div>
-        <div class="pub-title">Enhanced room temperature ferromagnetism in electrodeposited co-doped ZnO nanostructured thin film by controlling oxygen vacancy defects</div>
-        <div class="pub-authors">A. Simimol, Aji A. Anappara, S. Greulich-Weber, Prasantha Chowdhury and Harish C. Barshilia</div>
-        <div class="pub-journal">Journal of Applied Physics, 117, 214310 (2015)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#14</div>
+<div>
+<div class="pub-title">Enhanced room temperature ferromagnetism in electrodeposited co-doped ZnO nanostructured thin film by controlling oxygen vacancy defects</div>
+<div class="pub-authors">A. Simimol, Aji A. Anappara, S. Greulich-Weber, Prasantha Chowdhury and Harish C. Barshilia</div>
+<div class="pub-journal">Journal of Applied Physics, 117, 214310 (2015)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#13</div>
-      <div>
-        <div class="pub-title">Tuning of deep level emission in highly oriented electrodeposited ZnO nanorods by post growth annealing treatments</div>
-        <div class="pub-authors">A. Simimol, N. T. Manikandanath, Aji A. Anappara, Prasantha Chowdhury, and Harish C. Barshilia</div>
-        <div class="pub-journal">Journal of Applied Physics, 116, 074309 (2014)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#13</div>
+<div>
+<div class="pub-title">Tuning of deep level emission in highly oriented electrodeposited ZnO nanorods by post growth annealing treatments</div>
+<div class="pub-authors">A. Simimol, N. T. Manikandanath, Aji A. Anappara, Prasantha Chowdhury, and Harish C. Barshilia</div>
+<div class="pub-journal">Journal of Applied Physics, 116, 074309 (2014)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#12</div>
-      <div>
-        <div class="pub-title">Switching ultrastrong light-matter coupling on a subcycle scale</div>
-        <div class="pub-authors">R. Huber, Aji A. Anappara, G. Gunter, A. Sell, S. De Liberato, C. Ciuti, G. Biasiol, L. Sorba, A. Tredicucci, and A. Leitenstorfer</div>
-        <div class="pub-journal">Journal of Applied Physics, 109, 102418 (2011)</div>
-        <span class="pub-tag">Photonics</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#12</div>
+<div>
+<div class="pub-title">Switching ultrastrong light-matter coupling on a subcycle scale</div>
+<div class="pub-authors">R. Huber, Aji A. Anappara, G. Gunter, A. Sell, S. De Liberato, C. Ciuti, G. Biasiol, L. Sorba, A. Tredicucci, and A. Leitenstorfer</div>
+<div class="pub-journal">Journal of Applied Physics, 109, 102418 (2011)</div>
+<span class="pub-tag">Photonics</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#11</div>
-      <div>
-        <div class="pub-title">Signatures of ultrastrong light-matter coupling regime</div>
-        <div class="pub-authors">Aji A. Anappara, Simone De Liberato, Alessandro Tredicucci, Cristiano Ciuti, Giorgio Biasiol, Lucia Sorba, and Fabio Beltram</div>
-        <div class="pub-journal">Physical Review B, 79, 201303(R) (2009)</div>
-        <span class="pub-tag">Photonics</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#11</div>
+<div>
+<div class="pub-title">Signatures of ultrastrong light-matter coupling regime</div>
+<div class="pub-authors">Aji A. Anappara, Simone De Liberato, Alessandro Tredicucci, Cristiano Ciuti, Giorgio Biasiol, Lucia Sorba, and Fabio Beltram</div>
+<div class="pub-journal">Physical Review B, 79, 201303(R) (2009)</div>
+<span class="pub-tag">Photonics</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#10</div>
-      <div>
-        <div class="pub-title">Sub-cycle switch-on of ultrastrong light-matter interaction</div>
-        <div class="pub-authors">G. Gunter, Aji A. Anappara, J. Hees, A. Sell, G. Biasiol, L. Sorba, S. De Liberato, C. Ciuti, A. Tredicucci, A. Leitenstorfer and R. Huber</div>
-        <div class="pub-journal">Nature, 458, 178–181 (2009)</div>
-        <span class="pub-tag">Photonics</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#10</div>
+<div>
+<div class="pub-title">Sub-cycle switch-on of ultrastrong light-matter interaction</div>
+<div class="pub-authors">G. Gunter, Aji A. Anappara, J. Hees, A. Sell, G. Biasiol, L. Sorba, S. De Liberato, C. Ciuti, A. Tredicucci, A. Leitenstorfer and R. Huber</div>
+<div class="pub-journal">Nature, 458, 178–181 (2009)</div>
+<span class="pub-tag">Photonics</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#9</div>
-      <div>
-        <div class="pub-title">Photoacoustic thermal characterization of Al₂O₃-Ag ceramic nanocomposites</div>
-        <div class="pub-authors">Sajan D. George, Aji A. Anappara, P.R.S. Warrier, K.G.K. Warrier, P. Radhakrishnan, V.P.N. Namboori</div>
-        <div class="pub-journal">Materials Chemistry and Physics, 111, 38–41 (2008)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#9</div>
+<div>
+<div class="pub-title">Photoacoustic thermal characterization of Al₂O₃-Ag ceramic nanocomposites</div>
+<div class="pub-authors">Sajan D. George, Aji A. Anappara, P.R.S. Warrier, K.G.K. Warrier, P. Radhakrishnan, V.P.N. Namboori</div>
+<div class="pub-journal">Materials Chemistry and Physics, 111, 38–41 (2008)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#8</div>
-      <div>
-        <div class="pub-title">Tailoring light-matter interaction in intersubband microcavities</div>
-        <div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Lucia Sorba, Giorgio Biasiol</div>
-        <div class="pub-journal">Physica E: Low-dimensional Systems and Nanostructures, 40, 1906–1908 (2008)</div>
-        <span class="pub-tag">Photonics</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#8</div>
+<div>
+<div class="pub-title">Tailoring light-matter interaction in intersubband microcavities</div>
+<div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Lucia Sorba, Giorgio Biasiol</div>
+<div class="pub-journal">Physica E: Low-dimensional Systems and Nanostructures, 40, 1906–1908 (2008)</div>
+<span class="pub-tag">Photonics</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#7</div>
-      <div>
-        <div class="pub-title">Cavity polaritons from excited subband transitions</div>
-        <div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Lucia Sorba, Giorgio Biasiol</div>
-        <div class="pub-journal">Applied Physics Letters, 91, 231118–231122 (2007)</div>
-        <span class="pub-tag">Photonics</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#7</div>
+<div>
+<div class="pub-title">Cavity polaritons from excited subband transitions</div>
+<div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Lucia Sorba, Giorgio Biasiol</div>
+<div class="pub-journal">Applied Physics Letters, 91, 231118–231122 (2007)</div>
+<span class="pub-tag">Photonics</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#6</div>
-      <div>
-        <div class="pub-title">Controlling polariton coupling in intersubband microcavities</div>
-        <div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Giorgio Biasiol, Lucia Sorba</div>
-        <div class="pub-journal">Superlattices and Microstructures, 41, 308–312 (2007)</div>
-        <span class="pub-tag">Photonics</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#6</div>
+<div>
+<div class="pub-title">Controlling polariton coupling in intersubband microcavities</div>
+<div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Giorgio Biasiol, Lucia Sorba</div>
+<div class="pub-journal">Superlattices and Microstructures, 41, 308–312 (2007)</div>
+<span class="pub-tag">Photonics</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#5</div>
-      <div>
-        <div class="pub-title">Giant intersubband polariton splitting in InAs/AlSb microcavities</div>
-        <div class="pub-authors">Aji A. Anappara, David Barate, Alessandro Tredicucci, Jan Devenson, Roland Teissier, Alexei Baranov</div>
-        <div class="pub-journal">Solid State Communications, 142, 311–313 (2007)</div>
-        <span class="pub-tag">Photonics</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#5</div>
+<div>
+<div class="pub-title">Giant intersubband polariton splitting in InAs/AlSb microcavities</div>
+<div class="pub-authors">Aji A. Anappara, David Barate, Alessandro Tredicucci, Jan Devenson, Roland Teissier, Alexei Baranov</div>
+<div class="pub-journal">Solid State Communications, 142, 311–313 (2007)</div>
+<span class="pub-tag">Photonics</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#4</div>
-      <div>
-        <div class="pub-title">Tunnel-assisted manipulation of intersubband polaritons in asymmetric coupled quantum wells</div>
-        <div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Giorgio Biasiol and Lucia Sorba</div>
-        <div class="pub-journal">Applied Physics Letters, 89, 171109 (2006)</div>
-        <span class="pub-tag">Photonics</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#4</div>
+<div>
+<div class="pub-title">Tunnel-assisted manipulation of intersubband polaritons in asymmetric coupled quantum wells</div>
+<div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Giorgio Biasiol and Lucia Sorba</div>
+<div class="pub-journal">Applied Physics Letters, 89, 171109 (2006)</div>
+<span class="pub-tag">Photonics</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#3</div>
-      <div>
-        <div class="pub-title">Electrical control of polariton coupling in intersubband microcavities</div>
-        <div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Giorgio Biasiol and Lucia Sorba</div>
-        <div class="pub-journal">Applied Physics Letters, 87, 051105 (2005)</div>
-        <span class="pub-tag">Photonics</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#3</div>
+<div>
+<div class="pub-title">Electrical control of polariton coupling in intersubband microcavities</div>
+<div class="pub-authors">Aji A. Anappara, Alessandro Tredicucci, Fabio Beltram, Giorgio Biasiol and Lucia Sorba</div>
+<div class="pub-journal">Applied Physics Letters, 87, 051105 (2005)</div>
+<span class="pub-tag">Photonics</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#2</div>
-      <div>
-        <div class="pub-title">Impedance spectroscopic studies of sol-gel derived sub-critically dried silica aerogels</div>
-        <div class="pub-authors">Aji A. Anappara, S. Rajeshkumar, M. Mukundan, P.R.S. Warrier, Swapan Kumar Ghosh, K.G.K. Warrier</div>
-        <div class="pub-journal">Acta Materialia, 52, 369–375 (2004)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
+<div class="pub-item">
+<div class="pub-num">#2</div>
+<div>
+<div class="pub-title">Impedance spectroscopic studies of sol-gel derived sub-critically dried silica aerogels</div>
+<div class="pub-authors">Aji A. Anappara, S. Rajeshkumar, M. Mukundan, P.R.S. Warrier, Swapan Kumar Ghosh, K.G.K. Warrier</div>
+<div class="pub-journal">Acta Materialia, 52, 369–375 (2004)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
 
-    <div class="pub-item">
-      <div class="pub-num">#1</div>
-      <div>
-        <div class="pub-title">Impedance spectral studies of sol-gel alumina-silver nanocomposites</div>
-        <div class="pub-authors">Aji A. Anappara, S. K. Ghosh, P.R.S. Warrier, K.G.K. Warrier, W. Wunderlich</div>
-        <div class="pub-journal">Acta Materialia, 51, 3511–3519 (2003)</div>
-        <span class="pub-tag">Materials</span>
-      </div>
-    </div>
-  </div>
+<div class="pub-item">
+<div class="pub-num">#1</div>
+<div>
+<div class="pub-title">Impedance spectral studies of sol-gel alumina-silver nanocomposites</div>
+<div class="pub-authors">Aji A. Anappara, S. K. Ghosh, P.R.S. Warrier, K.G.K. Warrier, W. Wunderlich</div>
+<div class="pub-journal">Acta Materialia, 51, 3511–3519 (2003)</div>
+<span class="pub-tag">Materials</span>
+</div>
+</div>
+</div>
 </section>
 
 <!-- ===== PATENTS ===== -->
 <section class="section section-alt" id="patents">
-  <p class="section-label">INTELLECTUAL PROPERTY</p>
-  <h2 class="section-title">Patents</h2>
+<p class="section-label">INTELLECTUAL PROPERTY</p>
+<h2 class="section-title">Patents</h2>
 
-  <div class="patents-stats">
-    <div class="p-stat"><div class="p-stat-num">15</div><div class="p-stat-label">Total Patents</div></div>
-    <div class="p-stat"><div class="p-stat-num">13</div><div class="p-stat-label">Granted</div></div>
-    <div class="p-stat"><div class="p-stat-num">2</div><div class="p-stat-label">Published</div></div>
-  </div>
+<div class="patents-stats">
+<div class="p-stat"><div class="p-stat-num">15</div><div class="p-stat-label">Total Patents</div></div>
+<div class="p-stat"><div class="p-stat-num">13</div><div class="p-stat-label">Granted</div></div>
+<div class="p-stat"><div class="p-stat-num">2</div><div class="p-stat-label">Published</div></div>
+</div>
 
-  <p class="section-label" style="margin-bottom:1rem;">2026</p>
+<p class="section-label" style="margin-bottom:1rem;">2026</p>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2026</span>
-    </div>
-    <div class="patent-title">A dark-current free self-powered photodetector based on Vanadium carbide (VC) – Silver (Ag) heterostructures</div>
-    <div class="patent-appno">Patent No.: 588229 · Granted: 04/05/2026</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2026</span>
+</div>
+<div class="patent-title">A dark-current free self-powered photodetector based on Vanadium carbide (VC) – Silver (Ag) heterostructures</div>
+<div class="patent-appno">Patent No.: 588229 · Granted: 04/05/2026</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status published">PUBLISHED</span>
-      <span class="patent-year">2026</span>
-    </div>
-    <div class="patent-title">A scalable solid-state ionic transport device for continuous-time hardware-level differentiation and integration</div>
-    <div class="patent-appno">Appl. No.: 202641033335 · Published: 27/03/2026</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma, Henna Sherin P., Anupama K. S., Desouza Ivan Jemi, Allen Samuel Stephen</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status published">PUBLISHED</span>
+<span class="patent-year">2026</span>
+</div>
+<div class="patent-title">A scalable solid-state ionic transport device for continuous-time hardware-level differentiation and integration</div>
+<div class="patent-appno">Appl. No.: 202641033335 · Published: 27/03/2026</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma, Henna Sherin P., Anupama K. S., Desouza Ivan Jemi, Allen Samuel Stephen</div>
+</div>
 
-  <p class="section-label" style="margin-top:1.5rem; margin-bottom:1rem;">2025</p>
+<p class="section-label" style="margin-top:1.5rem; margin-bottom:1rem;">2025</p>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2025</span>
-    </div>
-    <div class="patent-title">An edible event-responsive photodetector for light intensity detection and method of operation thereof</div>
-    <div class="patent-appno">Patent No.: 565859 · Granted: 30/04/2025</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2025</span>
+</div>
+<div class="patent-title">An edible event-responsive photodetector for light intensity detection and method of operation thereof</div>
+<div class="patent-appno">Patent No.: 565859 · Granted: 30/04/2025</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2025</span>
-    </div>
-    <div class="patent-title">A method of the fabrication of pristine Vanadium monocarbide quantum dots for the reduction of nitrobenzene</div>
-    <div class="patent-appno">Patent No.: 565289 · Granted: 17/04/2025</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Anupama M.</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2025</span>
+</div>
+<div class="patent-title">A method of the fabrication of pristine Vanadium monocarbide quantum dots for the reduction of nitrobenzene</div>
+<div class="patent-appno">Patent No.: 565289 · Granted: 17/04/2025</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Anupama M.</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2025</span>
-    </div>
-    <div class="patent-title">Fabrication method of Vanadium monocarbide nanosheets as efficient anode catalysts for single-chamber microbial fuel cells</div>
-    <div class="patent-appno">Patent No.: 560607 · Granted: 19/02/2025</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Haribabu Krishnan, Anupama M., Juliana John, Karnapa Ajit</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2025</span>
+</div>
+<div class="patent-title">Fabrication method of Vanadium monocarbide nanosheets as efficient anode catalysts for single-chamber microbial fuel cells</div>
+<div class="patent-appno">Patent No.: 560607 · Granted: 19/02/2025</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Haribabu Krishnan, Anupama M., Juliana John, Karnapa Ajit</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2025</span>
-    </div>
-    <div class="patent-title">A zero-bias retinomorphic photodetector on a paper-based substrate and a method of fabricating the same</div>
-    <div class="patent-appno">Patent No.: 557484 · Granted: 06/01/2025</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2025</span>
+</div>
+<div class="patent-title">A zero-bias retinomorphic photodetector on a paper-based substrate and a method of fabricating the same</div>
+<div class="patent-appno">Patent No.: 557484 · Granted: 06/01/2025</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status published">PUBLISHED</span>
-      <span class="patent-year">2025</span>
-    </div>
-    <div class="patent-title">High-temperature broadband photodetector based on a self-powered hybrid p-n junction</div>
-    <div class="patent-appno">Appl. No.: 202541104335 A · Published: 28/11/2025</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Henna Sherin P.</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status published">PUBLISHED</span>
+<span class="patent-year">2025</span>
+</div>
+<div class="patent-title">High-temperature broadband photodetector based on a self-powered hybrid p-n junction</div>
+<div class="patent-appno">Appl. No.: 202541104335 A · Published: 28/11/2025</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Henna Sherin P.</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status published">PUBLISHED</span>
-      <span class="patent-year">2025</span>
-    </div>
-    <div class="patent-title">Artificial opto-ionotronic synaptic device</div>
-    <div class="patent-appno">Appl. No.: 202541019070 A · Published: 21/03/2025</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status published">PUBLISHED</span>
+<span class="patent-year">2025</span>
+</div>
+<div class="patent-title">Artificial opto-ionotronic synaptic device</div>
+<div class="patent-appno">Appl. No.: 202541019070 A · Published: 21/03/2025</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
+</div>
 
-  <p class="section-label" style="margin-top:1.5rem; margin-bottom:1rem;">2024</p>
+<p class="section-label" style="margin-top:1.5rem; margin-bottom:1rem;">2024</p>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2024</span>
-    </div>
-    <div class="patent-title">A dark-current free and carrier-diffusion based self-powered photodetector and method of operating the same</div>
-    <div class="patent-appno">Patent No.: 532661 · Granted: 12/04/2024</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2024</span>
+</div>
+<div class="patent-title">A dark-current free and carrier-diffusion based self-powered photodetector and method of operating the same</div>
+<div class="patent-appno">Patent No.: 532661 · Granted: 12/04/2024</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2024</span>
-    </div>
-    <div class="patent-title">A charge carrier-diffusion based self-powered photodetector based on Hafnium diboride/Silver heterostructures</div>
-    <div class="patent-appno">Patent No.: 529570 · Granted: 21/03/2024</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2024</span>
+</div>
+<div class="patent-title">A charge carrier-diffusion based self-powered photodetector based on Hafnium diboride/Silver heterostructures</div>
+<div class="patent-appno">Patent No.: 529570 · Granted: 21/03/2024</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2024</span>
-    </div>
-    <div class="patent-title">A Niobium diselenide based self-powered photodetector</div>
-    <div class="patent-appno">Patent No.: 551014 · Granted: 25/09/2024</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2024</span>
+</div>
+<div class="patent-title">A Niobium diselenide based self-powered photodetector</div>
+<div class="patent-appno">Patent No.: 551014 · Granted: 25/09/2024</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2024</span>
-    </div>
-    <div class="patent-title">Fabrication of a self-powered photodetector based on thermo-diffusion effect in ionic liquids</div>
-    <div class="patent-appno">Patent No.: 541052 · Granted: 06/06/2024</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2024</span>
+</div>
+<div class="patent-title">Fabrication of a self-powered photodetector based on thermo-diffusion effect in ionic liquids</div>
+<div class="patent-appno">Patent No.: 541052 · Granted: 06/06/2024</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Varsha Sharma</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2024</span>
-    </div>
-    <div class="patent-title">A method of synthesizing oxalate-functionalized Niobium monocarbide nanosheets for efficient photothermal conversion and light-triggered chemical reactions</div>
-    <div class="patent-appno">Patent No.: 547506 · Granted: 12/08/2024</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Anupama M.</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2024</span>
+</div>
+<div class="patent-title">A method of synthesizing oxalate-functionalized Niobium monocarbide nanosheets for efficient photothermal conversion and light-triggered chemical reactions</div>
+<div class="patent-appno">Patent No.: 547506 · Granted: 12/08/2024</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Anupama M.</div>
+</div>
 
-  <div class="patent-item">
-    <div class="patent-header">
-      <span class="patent-status granted">GRANTED</span>
-      <span class="patent-year">2024</span>
-    </div>
-    <div class="patent-title">A method for the visible light-induced selective degradation of poly(propylene carbonate) to its monomer propylene carbonate</div>
-    <div class="patent-appno">Patent No.: 515351 · Granted: 26/02/2024</div>
-    <div class="patent-inventors">👥 Aji A. Anappara, Parameswaran P., Saju K. John, Tijin Hanno Geo Saji</div>
-  </div>
+<div class="patent-item">
+<div class="patent-header">
+<span class="patent-status granted">GRANTED</span>
+<span class="patent-year">2024</span>
+</div>
+<div class="patent-title">A method for the visible light-induced selective degradation of poly(propylene carbonate) to its monomer propylene carbonate</div>
+<div class="patent-appno">Patent No.: 515351 · Granted: 26/02/2024</div>
+<div class="patent-inventors">👥 Aji A. Anappara, Parameswaran P., Saju K. John, Tijin Hanno Geo Saji</div>
+</div>
 </section>
 
 <!-- ===== STUDENTS ===== -->
 <section class="section" id="students">
-  <p class="section-label">PHOTONIC MATERIALS AND DEVICES LABORATORY</p>
-  <h2 class="section-title">Doctoral Students</h2>
+<p class="section-label">PHOTONIC MATERIALS AND DEVICES LABORATORY</p>
+<h2 class="section-title">Doctoral Students</h2>
 
-  <div class="students-grid">
-    <div>
-      <div class="students-group-title">CURRENT STUDENTS</div>
+<div class="students-grid">
+<div>
+<div class="students-group-title">CURRENT STUDENTS</div>
 
-      <div class="student-card">
-        <div class="student-name">Ms. Varsha Sharma</div>
-        <div class="student-topic">Event-responsive and retinomorphic sensors; artificial opto-ionotronic synaptic devices</div>
-      </div>
+<div class="student-card">
+<div class="student-name">Ms. Varsha Sharma</div>
+<div class="student-topic">Event-responsive and retinomorphic sensors; artificial opto-ionotronic synaptic devices</div>
+</div>
 
-      <div class="student-card">
-        <div class="student-name">Ms. Henna Sherin P.</div>
-        <div class="student-topic">Higher-operating-temperature Near-IR photodetectors; self-powered photodetectors for UV-Vis-NIR detection</div>
-        <div class="student-note">INSPIRE Funding</div>
-      </div>
+<div class="student-card">
+<div class="student-name">Ms. Henna Sherin P.</div>
+<div class="student-topic">Higher-operating-temperature Near-IR photodetectors; self-powered photodetectors for UV-Vis-NIR detection</div>
+<div class="student-note">INSPIRE Funding</div>
+</div>
 
-      <div class="student-card">
-        <div class="student-name">Ms. Anupama M.</div>
-        <div class="student-topic">Development of materials for efficient, light-triggered, industrially-relevant chemical reactions</div>
-        <div class="student-note">Thesis Submitted</div>
-      </div>
+<div class="student-card">
+<div class="student-name">Ms. Anupama M.</div>
+<div class="student-topic">Development of materials for efficient, light-triggered, industrially-relevant chemical reactions</div>
+<div class="student-note">Thesis Submitted</div>
+</div>
 
-      <div class="student-card">
-        <div class="student-name">Ms. Gana K.G.</div>
-        <div class="student-topic">Ongoing doctoral research</div>
-      </div>
-    </div>
+<div class="student-card">
+<div class="student-name">Ms. Gana K.G.</div>
+<div class="student-topic">Ongoing doctoral research</div>
+</div>
+</div>
 
-    <div>
-      <div class="students-group-title">COMPLETED DOCTORAL RESEARCH</div>
+<div>
+<div class="students-group-title">COMPLETED DOCTORAL RESEARCH</div>
 
-      <div class="student-card">
-        <div class="student-name">Dr. Swathi V. M.</div>
-        <div class="student-topic">Multivalency-induced structural variations and related opto-electronic properties of elemental chalcogen nanostructures</div>
-      </div>
+<div class="student-card">
+<div class="student-name">Dr. Swathi V. M.</div>
+<div class="student-topic">Multivalency-induced structural variations and related opto-electronic properties of elemental chalcogen nanostructures</div>
+</div>
 
-      <div class="student-card">
-        <div class="student-name">Dr. Saju K. John</div>
-        <div class="student-topic">Optoelectronic properties of boron-based nanostructures derived from metal diborides</div>
-      </div>
+<div class="student-card">
+<div class="student-name">Dr. Saju K. John</div>
+<div class="student-topic">Optoelectronic properties of boron-based nanostructures derived from metal diborides</div>
+</div>
 
-      <div class="student-card">
-        <div class="student-name">Dr. Nishaina Sahadev</div>
-        <div class="student-topic">Energy harvesting applications of low-dimensional carbon-based systems</div>
-      </div>
+<div class="student-card">
+<div class="student-name">Dr. Nishaina Sahadev</div>
+<div class="student-topic">Energy harvesting applications of low-dimensional carbon-based systems</div>
+</div>
 
-      <div class="student-card">
-        <div class="student-name">Dr. Julin Joseph</div>
-        <div class="student-topic">Luminescent carbon dots for chemical sensing, phosphorescence and white-light emitting device applications</div>
-      </div>
+<div class="student-card">
+<div class="student-name">Dr. Julin Joseph</div>
+<div class="student-topic">Luminescent carbon dots for chemical sensing, phosphorescence and white-light emitting device applications</div>
+</div>
 
-      <div class="student-card">
-        <div class="student-name">Dr. A. Simimol</div>
-        <div class="student-topic">Defect-induced electrodeposited ZnO nanostructures: optical, magnetic and electrical properties</div>
-      </div>
+<div class="student-card">
+<div class="student-name">Dr. A. Simimol</div>
+<div class="student-topic">Defect-induced electrodeposited ZnO nanostructures: optical, magnetic and electrical properties</div>
+</div>
 
-      <div class="student-card">
-        <div class="student-name">Dr. Prajith K.</div>
-        <div class="student-topic">Multifunctional Silicon nanopillars for Antireflection, Surface Enhanced Raman Spectroscopy and photodetector applications</div>
-      </div>
-    </div>
-  </div>
+<div class="student-card">
+<div class="student-name">Dr. Prajith K.</div>
+<div class="student-topic">Multifunctional Silicon nanopillars for Antireflection, Surface Enhanced Raman Spectroscopy and photodetector applications</div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- ===== TEACHING ===== -->
 <section class="section section-alt" id="teaching">
-  <p class="section-label">ACADEMICS</p>
-  <h2 class="section-title">Teaching</h2>
+<p class="section-label">ACADEMICS</p>
+<h2 class="section-title">Teaching</h2>
 
-  <div class="teaching-grid">
-    <div>
-      <div class="course-group-title">THEORY COURSES</div>
-      <div class="course-item">
-        <div class="course-code">PH4029D</div>
-        <div class="course-name">Solid State Devices</div>
-      </div>
-      <div class="course-item">
-        <div class="course-code">PH4025D</div>
-        <div class="course-name">Light-matter interaction in resonators</div>
-      </div>
-      <div class="course-item">
-        <div class="course-code">PH4001D</div>
-        <div class="course-name">Laser Physics</div>
-      </div>
-      <div class="course-item">
-        <div class="course-code">PH1001D</div>
-        <div class="course-name">Physics of Materials</div>
-      </div>
-    </div>
-    <div>
-      <div class="course-group-title">LABORATORY COURSES</div>
-      <div class="course-item">
-        <div class="course-code">—</div>
-        <div class="course-name">General Physics Lab</div>
-      </div>
-      <div class="course-item">
-        <div class="course-code">—</div>
-        <div class="course-name">Solid State Physics Lab</div>
-      </div>
-    </div>
-  </div>
+<div class="teaching-grid">
+<div>
+<div class="course-group-title">THEORY COURSES</div>
+<div class="course-item">
+<div class="course-code">PH4029D</div>
+<div class="course-name">Solid State Devices</div>
+</div>
+<div class="course-item">
+<div class="course-code">PH4025D</div>
+<div class="course-name">Light-matter interaction in resonators</div>
+</div>
+<div class="course-item">
+<div class="course-code">PH4001D</div>
+<div class="course-name">Laser Physics</div>
+</div>
+<div class="course-item">
+<div class="course-code">PH1001D</div>
+<div class="course-name">Physics of Materials</div>
+</div>
+</div>
+<div>
+<div class="course-group-title">LABORATORY COURSES</div>
+<div class="course-item">
+<div class="course-code">—</div>
+<div class="course-name">General Physics Lab</div>
+</div>
+<div class="course-item">
+<div class="course-code">—</div>
+<div class="course-name">Solid State Physics Lab</div>
+</div>
+</div>
+</div>
 
-  <div class="join-box">
-    <h4>Join Our Research Group</h4>
-    <p><strong>Postdoctoral/Ph.D. positions:</strong></p>
-    <p>Highly motivated and talented postdoctoral/doctoral aspirants are encouraged to reach out directly.</p>
-    <p><strong>B.Tech/M.Tech/M.Sc. projects:</strong></p>
-    <p>Interested students from NITC can contact the group leader to discuss possible project topics.</p>
-    <a href="mailto:aji@nitc.ac.in" class="btn-email">✉ Send an Email</a>
-  </div>
+<div class="join-box">
+<h4>Join Our Research Group</h4>
+<p><strong>Postdoctoral/Ph.D. positions:</strong></p>
+<p>Highly motivated and talented postdoctoral/doctoral aspirants are encouraged to reach out directly.</p>
+<p><strong>B.Tech/M.Tech/M.Sc. projects:</strong></p>
+<p>Interested students from NITC can contact the group leader to discuss possible project topics.</p>
+<a href="mailto:aji@nitc.ac.in" class="btn-email">✉ Send an Email</a>
+</div>
 </section>
 
 <!-- ===== CONTACT ===== -->
 <section class="section" id="contact">
-  <p class="section-label">GET IN TOUCH</p>
-  <h2 class="section-title">Contact</h2>
+<p class="section-label">GET IN TOUCH</p>
+<h2 class="section-title">Contact</h2>
 
-  <div class="contact-grid">
-    <div class="contact-items">
-      <div class="contact-item">
-        <span class="contact-icon">📍</span>
-        <div>
-          <div class="contact-label">OFFICE ADDRESS</div>
-          <div class="contact-val">PH 117 (B), First Floor, Physics Building<br>Department of Physics, NIT Calicut<br>Kerala, India – 673 601</div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📞</span>
-        <div>
-          <div class="contact-label">PHONE</div>
-          <div class="contact-val"><a href="tel:+914952285107">+91-(0)495-2285107</a></div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">✉️</span>
-        <div>
-          <div class="contact-label">EMAIL</div>
-          <div class="contact-val"><a href="mailto:aji@nitc.ac.in">aji@nitc.ac.in</a></div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">🌐</span>
-        <div>
-          <div class="contact-label">DEPARTMENT PROFILE</div>
-          <div class="contact-val"><a href="https://nitc.ac.in/department/physics/faculty-and-staff/faculty/4990c962-48ca-427c-b74a-7943d5f33f7b" target="_blank">NITC Physics Department</a></div>
-        </div>
-      </div>
-      <div class="funding-note">
-        Active externally funded research: <strong>ANRF-ARG (~₹63.96 lakhs, 2026–2029)</strong> on next-generation self-powered high-temperature broadband photodetectors.
-      </div>
-    </div>
+<div class="contact-grid">
+<div class="contact-items">
+<div class="contact-item">
+<span class="contact-icon">📍</span>
+<div>
+<div class="contact-label">OFFICE ADDRESS</div>
+<div class="contact-val">PH 117 (B), First Floor, Physics Building<br>Department of Physics, NIT Calicut<br>Kerala, India – 673 601</div>
+</div>
+</div>
+<div class="contact-item">
+<span class="contact-icon">📞</span>
+<div>
+<div class="contact-label">PHONE</div>
+<div class="contact-val"><a href="tel:+914952285107">+91-(0)495-2285107</a></div>
+</div>
+</div>
+<div class="contact-item">
+<span class="contact-icon">✉️</span>
+<div>
+<div class="contact-label">EMAIL</div>
+<div class="contact-val"><a href="mailto:aji@nitc.ac.in">aji@nitc.ac.in</a></div>
+</div>
+</div>
+<div class="contact-item">
+<span class="contact-icon">🌐</span>
+<div>
+<div class="contact-label">DEPARTMENT PROFILE</div>
+<div class="contact-val"><a href="https://nitc.ac.in/department/physics/faculty-and-staff/faculty/4990c962-48ca-427c-b74a-7943d5f33f7b" target="_blank">NITC Physics Department</a></div>
+</div>
+</div>
+<div class="funding-note">
+Active externally funded research: <strong>ANRF-ARG (~₹63.96 lakhs, 2026–2029)</strong> on next-generation self-powered high-temperature broadband photodetectors.
+</div>
+</div>
 
-    <div class="contact-box">
-      <h4>Join Our Research Group</h4>
-      <p>We are always looking for highly motivated and talented researchers to join our group. We work on cutting-edge problems at the interface of nanomaterials, optoelectronics, and ionotronic systems at the <strong>Photonic Materials and Devices Laboratory</strong>.</p>
-      <p><strong>Postdoctoral/Ph.D. positions:</strong><br>Highly motivated and talented postdoctoral/doctoral aspirants are encouraged to reach out directly.</p>
-      <p><strong>B.Tech/M.Tech/M.Sc. projects:</strong><br>Interested students from NITC can contact the group leader to discuss possible project topics.</p>
-      <a href="mailto:aji@nitc.ac.in" class="btn-email">✉ Send an Email</a>
-    </div>
-  </div>
+<div class="contact-box">
+<h4>Join Our Research Group</h4>
+<p>We are always looking for highly motivated and talented researchers to join our group. We work on cutting-edge problems at the interface of nanomaterials, optoelectronics, and ionotronic systems at the <strong>Photonic Materials and Devices Laboratory</strong>.</p>
+<p><strong>Postdoctoral/Ph.D. positions:</strong><br>Highly motivated and talented postdoctoral/doctoral aspirants are encouraged to reach out directly.</p>
+<p><strong>B.Tech/M.Tech/M.Sc. projects:</strong><br>Interested students from NITC can contact the group leader to discuss possible project topics.</p>
+<a href="mailto:aji@nitc.ac.in" class="btn-email">✉ Send an Email</a>
+</div>
+</div>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <p>© 2026 Dr. Aji A. Anappara · Department of Physics, NIT Calicut · Professor · Photonic Materials and Devices Laboratory</p>
+<p>© 2026 Dr. Aji A. Anappara · Department of Physics, NIT Calicut · Professor · Photonic Materials and Devices Laboratory</p>
 </footer>
 
 <script>
-  // ===== THEME TOGGLE (desktop + mobile) =====
-  const html = document.documentElement;
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  html.setAttribute('data-theme', savedTheme);
+// ===== THEME TOGGLE (desktop + mobile) =====
+const html = document.documentElement;
+const savedTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', savedTheme);
 
-  function applyThemeIcons(theme) {
-    document.querySelectorAll('.theme-icon, .theme-icon-mobile').forEach(el => {
-      el.textContent = theme === 'dark' ? '☀️' : '🌙';
-    });
-  }
-  applyThemeIcons(savedTheme);
+function applyThemeIcons(theme) {
+document.querySelectorAll('.theme-icon, .theme-icon-mobile').forEach(el => {
+el.textContent = theme === 'dark' ? '☀️' : '🌙';
+});
+}
+applyThemeIcons(savedTheme);
 
-  function toggleTheme() {
-    const current = html.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    applyThemeIcons(next);
-  }
+function toggleTheme() {
+const current = html.getAttribute('data-theme');
+const next = current === 'dark' ? 'light' : 'dark';
+html.setAttribute('data-theme', next);
+localStorage.setItem('theme', next);
+applyThemeIcons(next);
+}
 
-  document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
-  document.getElementById('themeToggleMobile')?.addEventListener('click', toggleTheme);
+document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+document.getElementById('themeToggleMobile')?.addEventListener('click', toggleTheme);
 
-  // ===== HAMBURGER / MOBILE DRAWER =====
-  const hamburger = document.getElementById('navHamburger');
-  const drawer = document.getElementById('mobileDrawer');
-  const overlay = document.getElementById('mobileOverlay');
+// ===== HAMBURGER / MOBILE DRAWER =====
+const hamburger = document.getElementById('navHamburger');
+const drawer = document.getElementById('mobileDrawer');
+const overlay = document.getElementById('mobileOverlay');
 
-  function openDrawer() {
-    hamburger.classList.add('open');
-    drawer.classList.add('open');
-    overlay.classList.add('open');
-    hamburger.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeDrawer() {
-    hamburger.classList.remove('open');
-    drawer.classList.remove('open');
-    overlay.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
+function openDrawer() {
+hamburger.classList.add('open');
+drawer.classList.add('open');
+overlay.classList.add('open');
+hamburger.setAttribute('aria-expanded', 'true');
+document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+hamburger.classList.remove('open');
+drawer.classList.remove('open');
+overlay.classList.remove('open');
+hamburger.setAttribute('aria-expanded', 'false');
+document.body.style.overflow = '';
+}
 
-  hamburger?.addEventListener('click', () => {
-    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
-  });
-  overlay?.addEventListener('click', closeDrawer);
+hamburger?.addEventListener('click', () => {
+drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+});
+overlay?.addEventListener('click', closeDrawer);
 
-  // Close drawer when a nav link is clicked
-  drawer?.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', closeDrawer);
-  });
-
-  // Close on Escape key
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeDrawer();
-  });
-
-  // ===== PUBLICATION FILTER BUTTONS =====
- document.querySelectorAll('.pub-filter').forEach(btn => {
-  btn.addEventListener('click', () => {
-
-    document.querySelectorAll('.pub-filter').forEach(b => 
-      b.classList.remove('active')
-    );
-    btn.classList.add('active');
-
-    const category = btn.textContent.trim();
-
-    document.querySelectorAll('.pub-item').forEach(item => {
-      const tag = item.querySelector('.pub-tag').textContent.trim();
-
-      if (category.startsWith('All') || tag === category) {
-        item.style.display = '';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-
-  });
+// Close drawer when a nav link is clicked
+drawer?.querySelectorAll('a').forEach(a => {
+a.addEventListener('click', closeDrawer);
 });
 
-  // ===== RESEARCH TAG BUTTONS =====
-  document.querySelectorAll('.res-tag-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.res-tag-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
+// Close on Escape key
+document.addEventListener('keydown', e => {
+if (e.key === 'Escape') closeDrawer();
+});
 
-  // ===== ACTIVE NAV HIGHLIGHT ON SCROLL =====
-  const sections = document.querySelectorAll('section[id]');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');
-    });
-    document.querySelectorAll('.navbar-nav a').forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
-    });
-  });
-  // --------------------------------------
-  // // ===== ADD THIS TO THE VERY BOTTOM OF YOUR SCRIPT =====
-  // const panels = document.querySelectorAll('.panel');
-  // const dots = document.querySelectorAll('.dot');
+// ===== PUBLICATION FILTER BUTTONS =====
+document.querySelectorAll('.pub-filter').forEach(btn => {
+btn.addEventListener('click', () => {
 
-  // panels.forEach((panel, index) => {
-  //   // Activates the correct dot indicator when the cursor hovers over a card
-  //   panel.addEventListener('mouseenter', () => {
-  //     dots.forEach(dot => dot.classList.remove('active'));
-  //     if (dots[index]) dots[index].classList.add('active');
-  //   });
-  // });
-  // -------------------------------------------
+document.querySelectorAll('.pub-filter').forEach(b => 
+b.classList.remove('active')
+);
+btn.classList.add('active');
+
+const category = btn.textContent.trim();
+
+document.querySelectorAll('.pub-item').forEach(item => {
+const tag = item.querySelector('.pub-tag').textContent.trim();
+
+if (category.startsWith('All') || tag === category) {
+item.style.display = '';
+} else {
+item.style.display = 'none';
+}
+});
+
+});
+});
+
+// ===== RESEARCH TAG BUTTONS =====
+document.querySelectorAll('.res-tag-btn').forEach(btn => {
+btn.addEventListener('click', () => {
+document.querySelectorAll('.res-tag-btn').forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+});
+});
+
+// ===== ACTIVE NAV HIGHLIGHT ON SCROLL =====
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+let current = '';
+sections.forEach(sec => {
+if (window.scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');
+});
+document.querySelectorAll('.navbar-nav a').forEach(a => {
+a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
+});
+});
+// --------------------------------------
+// ===== ADD THIS TO THE VERY BOTTOM OF YOUR SCRIPT =====
+const panels = document.querySelectorAll('.panel');
+const dots = document.querySelectorAll('.dot');
+
+panels.forEach((panel, index) => {
+// Activates the correct dot indicator when the cursor hovers over a card
+panel.addEventListener('mouseenter', () => {
+dots.forEach(dot => dot.classList.remove('active'));
+if (dots[index]) dots[index].classList.add('active');
+});
+});
+// -------------------------------------------
 </script>
 </body>
 </html>
