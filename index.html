@@ -117,6 +117,16 @@ transition: color 0.2s, background 0.2s;
 .navbar-nav a:hover { color:#38bdf8 !important; background: var(--surface); }
 /* .mobile-nav-drawer:hover{color:#38bdf8;!important;}
 #qw:hover{color:#38bdf8;} */
+   /* ===== NAVBAR SCROLLED STATE (Dark) ===== */
+.navbar.scrolled {
+  /* Change to your desired dark color when scrolled */
+  background: rgba(13, 15, 20, 0.95); 
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  
+  /* Optional: slightly shrink navbar padding on scroll for a premium feel */
+  padding: 0.6rem 2.5rem; 
+}
 
 /* ===== HERO ===== */
 .hero {
@@ -2084,17 +2094,15 @@ a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
 });
 });
 // --------------------------------------
-// ===== ADD THIS TO THE VERY BOTTOM OF YOUR SCRIPT =====
-// const panels = document.querySelectorAll('.panel');
-// const dots = document.querySelectorAll('.dot');
+const navbar = document.querySelector('.navbar');
 
-// panels.forEach((panel, index) => {
-// // Activates the correct dot indicator when the cursor hovers over a card
-// panel.addEventListener('mouseenter', () => {
-// dots.forEach(dot => dot.classList.remove('active'));
-// if (dots[index]) dots[index].classList.add('active');
-// });
-// });
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 // -------------------------------------------
 </script>
 </body>
