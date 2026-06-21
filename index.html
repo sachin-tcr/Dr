@@ -1683,8 +1683,9 @@ document.getElementById('gallery').addEventListener('mouseenter', () => clearInt
 </div>
 </div>
 </div>
-   <div class="pub-actions" style="display: flex; justify-content: center; margin-top: 2.5rem; width: 100%;">
+ <div class="pub-actions" style="display: flex; justify-content: center; gap: 1rem; margin-top: 2.5rem; width: 100%;">
   <button class="btn-show-more" id="btnShowMore">Show More</button>
+  <button class="btn-show-more" id="btnShowLess" style="display: none;">Show Less</button>
 </div>
 </section>
 
@@ -2194,6 +2195,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const pubItems = document.querySelectorAll('.pub-item');
   const btnShowMore = document.getElementById('btnShowMore');
+  const btnShowLess = document.getElementById('btnShowLess'); // New Show Less button
   const filterButtons = document.querySelectorAll('.pub-filter');
 
   function renderPublications() {
@@ -2202,33 +2204,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 1. Loop through every publication item
     pubItems.forEach(item => {
-      // Find the tag text inside this item (e.g., "Materials", "Devices")
       const tagElement = item.querySelector('.pub-tag');
       const tagText = tagElement ? tagElement.textContent.trim().toLowerCase() : '';
       
       const isAllTab = (activeFilter === 'all');
-      // Check if this item matches the clicked filter (ignoring uppercase/lowercase)
       const isMatch = isAllTab || (tagText === activeFilter);
 
       if (isMatch) {
         totalMatches++;
         
-        // If we are on the "All" tab, limit how many we show
         if (isAllTab) {
           if (currentlyShown < currentVisibleCount) {
-            item.style.display = 'flex'; // Show item
+            item.style.display = 'flex'; 
             currentlyShown++;
           } else {
-            item.style.display = 'none'; // Hide overflow items
+            item.style.display = 'none'; 
           }
-        } 
-        // If we are on a specific category tab (like Devices), show ALL matches
-        else {
+        } else {
           item.style.display = 'flex'; 
           currentlyShown++;
         }
       } else {
-        // Hide items that don't match the filter
         item.style.display = 'none';
       }
     });
@@ -2245,53 +2241,72 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // 3. Handle the "Show More" button visibility
-    if (btnShowMore) {
-      // ONLY show the button if we are on the "All" tab AND there are still hidden items
-      if (activeFilter === 'all' && currentlyShown < totalMatches) {
-        btnShowMore.style.display = 'block';
+    // 3. Handle the visibility of BOTH buttons
+    if (activeFilter === 'all') {
+      // If there are more total items than our page limit (5)
+      if (totalMatches > ITEMS_PER_PAGE) {
+        if (currentlyShown < totalMatches) {
+          // Still more to show
+          if (btnShowMore) btnShowMore.style.display = 'block';
+          if (btnShowLess) btnShowLess.style.display = 'none';
+        } else {
+          // We have shown everything! Swap the buttons.
+          if (btnShowMore) btnShowMore.style.display = 'none';
+          if (btnShowLess) btnShowLess.style.display = 'block';
+        }
       } else {
-        btnShowMore.style.display = 'none';
+        // 5 or fewer items total - hide both buttons
+        if (btnShowMore) btnShowMore.style.display = 'none';
+        if (btnShowLess) btnShowLess.style.display = 'none';
       }
+    } else {
+      // On specific category tabs, hide both buttons
+      if (btnShowMore) btnShowMore.style.display = 'none';
+      if (btnShowLess) btnShowLess.style.display = 'none';
     }
   }
 
   // --- EVENT LISTENERS ---
 
-  // Handle clicking the "Show More" button
   if (btnShowMore) {
     btnShowMore.addEventListener('click', (e) => {
       e.preventDefault();
-      currentVisibleCount += ITEMS_PER_PAGE; // Add 5 more to the limit
+      currentVisibleCount += ITEMS_PER_PAGE; 
       renderPublications();
     });
   }
 
-  // Handle clicking the category filter buttons
+  if (btnShowLess) {
+    btnShowLess.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentVisibleCount = ITEMS_PER_PAGE; // Reset back to 5
+      renderPublications();
+      
+      // Optional: Smoothly scroll the user back to the top of the publications section 
+      // so they don't get lost at the bottom of the page when the list shrinks!
+      document.getElementById('publications').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
   filterButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       
-      // Update the orange 'active' styling on the buttons
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Figure out which category was clicked, forced to lowercase for safe matching
       const btnText = btn.textContent.trim().toLowerCase();
-      
       if (btnText.startsWith('all')) {
         activeFilter = 'all';
       } else {
         activeFilter = btnText;
       }
 
-      // Reset the page count back to 5 every time they switch tabs
       currentVisibleCount = ITEMS_PER_PAGE; 
       renderPublications();
     });
   });
 
-  // Run the function once immediately when the page loads
   renderPublications();
 });
 //-----------------------------------------------
