@@ -2077,48 +2077,104 @@ if (e.key === 'Escape') closeDrawer();
 });
 
 // ===== PUBLICATION FILTER BUTTONS =====
-document.querySelectorAll('.pub-filter').forEach(btn => {
-btn.addEventListener('click', () => {
+// ===== PUBLICATIONS FILTER & SHOW MORE LOGIC =====
+document.addEventListener("DOMContentLoaded", () => {
+  const ITEMS_PER_PAGE = 5; 
+  let currentVisibleCount = ITEMS_PER_PAGE;
+  let activeFilter = 'all';
 
-document.querySelectorAll('.pub-filter').forEach(b => 
-b.classList.remove('active')
-);
-btn.classList.add('active');
+  const pubItems = document.querySelectorAll('.pub-item');
+  const btnShowMore = document.getElementById('btnShowMore');
+  const filterButtons = document.querySelectorAll('.pub-filter');
 
-const category = btn.textContent.trim();
+  function updatePublicationsDisplay() {
+    let totalInCurrentFilter = 0;
+    let visibleInCurrentFilter = 0;
 
-document.querySelectorAll('.pub-item').forEach(item => {
-const tag = item.querySelector('.pub-tag').textContent.trim();
+    // 1. Calculate how many items match the current filter and apply display toggles
+    pubItems.forEach((item) => {
+      const tagElement = item.querySelector('.pub-tag');
+      const itemCategory = tagElement ? tagElement.textContent.trim() : '';
 
-if (category.startsWith('All') || tag === category) {
-item.style.display = '';
-} else {
-item.style.display = 'none';
-}
-});
+      // Check if item matches the selected filter
+      const matchesFilter = (activeFilter === 'all') || (itemCategory === activeFilter);
 
-});
+      if (matchesFilter) {
+        totalInCurrentFilter++;
+        
+        // If "All" is selected, respect the pagination limit.
+        // If a specific category is selected, ignore the limit and show everything.
+        if (activeFilter !== 'all' || visibleInCurrentFilter < currentVisibleCount) {
+          item.style.display = 'flex'; // Uses 'flex' to match your CSS rules
+          visibleInCurrentFilter++;
+        } else {
+          item.style.display = 'none';
+        }
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    // 2. Dynamically update the chronological numbering based on what is currently shown
+    let displayIndex = 0;
+    pubItems.forEach((item) => {
+       if (item.style.display !== 'none') {
+           const numDiv = item.querySelector('.pub-num');
+           if (numDiv) {
+               numDiv.textContent = `#${totalInCurrentFilter - displayIndex}`;
+           }
+           displayIndex++;
+       }
+    });
+
+    // 3. Handle the visibility of the "Show More" button
+    if (btnShowMore) {
+      if (activeFilter === 'all' && currentVisibleCount < totalInCurrentFilter) {
+        btnShowMore.style.display = 'block';
+      } else {
+        btnShowMore.style.display = 'none';
+      }
+    }
+  }
+
+  // Handle "Show More" button clicks
+  if (btnShowMore) {
+    btnShowMore.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentVisibleCount += ITEMS_PER_PAGE;
+      updatePublicationsDisplay();
+    });
+  }
+
+  // Handle Filter button clicks
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // Update active button styling
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Determine filter category from button text
+      const btnText = btn.textContent.trim();
+      if (btnText.startsWith('All')) {
+        activeFilter = 'all';
+      } else {
+        activeFilter = btnText;
+      }
+
+      // Reset pagination back to initial count when switching filters
+      currentVisibleCount = ITEMS_PER_PAGE; 
+      updatePublicationsDisplay();
+    });
+  });
+
+  // Run on initial page load
+  updatePublicationsDisplay();
 });
 
 // ===== RESEARCH TAG BUTTONS =====
-document.querySelectorAll('.res-tag-btn').forEach(btn => {
-btn.addEventListener('click', () => {
-document.querySelectorAll('.res-tag-btn').forEach(b => b.classList.remove('active'));
-btn.classList.add('active');
-});
-});
 
-// ===== ACTIVE NAV HIGHLIGHT ON SCROLL =====
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-let current = '';
-sections.forEach(sec => {
-if (window.scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');
-});
-document.querySelectorAll('.navbar-nav a').forEach(a => {
-a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
-});
-});
 // --------------------------------------
 const navbar = document.querySelector('.navbar');
 
@@ -2130,73 +2186,115 @@ const navbar = document.querySelector('.navbar');
     }
   });
 // -------------------------------------------
-   //show more
+//show more
 document.addEventListener("DOMContentLoaded", () => {
   const ITEMS_PER_PAGE = 5; 
   let currentVisibleCount = ITEMS_PER_PAGE;
-  let activeFilter = 'all';
+  let activeFilter = 'all'; // Starts on the 'All' tab
 
-  const pubListContainer = document.querySelector('.pub-list');
+  const pubItems = document.querySelectorAll('.pub-item');
   const btnShowMore = document.getElementById('btnShowMore');
   const filterButtons = document.querySelectorAll('.pub-filter');
 
-  // Clone and preserve the original 41 list nodes on load
-  const allPublicationElements = Array.from(document.querySelectorAll('.pub-item'));
+  function renderPublications() {
+    let totalMatches = 0;
+    let currentlyShown = 0;
 
-  function updatePublicationsDisplay() {
-    // Clear out current DOM layout container view
-    pubListContainer.innerHTML = '';
-
-    // Filter items based on the data-filter attribute
-    const filteredElements = allPublicationElements.filter(item => {
-      if (activeFilter === 'all') return true;
+    // 1. Loop through every publication item
+    pubItems.forEach(item => {
+      // Find the tag text inside this item (e.g., "Materials", "Devices")
       const tagElement = item.querySelector('.pub-tag');
-      return tagElement && tagElement.textContent.trim().toLowerCase() === activeFilter.toLowerCase();
-    });
+      const tagText = tagElement ? tagElement.textContent.trim().toLowerCase() : '';
+      
+      const isAllTab = (activeFilter === 'all');
+      // Check if this item matches the clicked filter (ignoring uppercase/lowercase)
+      const isMatch = isAllTab || (tagText === activeFilter);
 
-    // Splice the active segment out of memory array chunk 
-    const itemsToDisplay = filteredElements.slice(0, currentVisibleCount);
-    
-    itemsToDisplay.forEach((item, index) => {
-      // Clean up index indicators dynamically based on real visible filters order
-      const numDiv = item.querySelector('.pub-num');
-      if (numDiv) {
-        numDiv.textContent = `#${filteredElements.length - index}`;
+      if (isMatch) {
+        totalMatches++;
+        
+        // If we are on the "All" tab, limit how many we show
+        if (isAllTab) {
+          if (currentlyShown < currentVisibleCount) {
+            item.style.display = 'flex'; // Show item
+            currentlyShown++;
+          } else {
+            item.style.display = 'none'; // Hide overflow items
+          }
+        } 
+        // If we are on a specific category tab (like Devices), show ALL matches
+        else {
+          item.style.display = 'flex'; 
+          currentlyShown++;
+        }
+      } else {
+        // Hide items that don't match the filter
+        item.style.display = 'none';
       }
-      pubListContainer.appendChild(item);
     });
 
-    // Toggle button layout visibility rule logic safely
-    if (currentVisibleCount >= filteredElements.length) {
-      btnShowMore.style.setProperty('display', 'none', 'important');
-    } else {
-      btnShowMore.style.setProperty('display', 'block', 'important');
+    // 2. Renumber the visible items dynamically
+    let displayIndex = totalMatches;
+    pubItems.forEach(item => {
+      if (item.style.display === 'flex') {
+        const numDiv = item.querySelector('.pub-num');
+        if (numDiv) {
+          numDiv.textContent = `#${displayIndex}`;
+        }
+        displayIndex--;
+      }
+    });
+
+    // 3. Handle the "Show More" button visibility
+    if (btnShowMore) {
+      // ONLY show the button if we are on the "All" tab AND there are still hidden items
+      if (activeFilter === 'all' && currentlyShown < totalMatches) {
+        btnShowMore.style.display = 'block';
+      } else {
+        btnShowMore.style.display = 'none';
+      }
     }
   }
 
-  // Action event execution handling rules
-  btnShowMore.addEventListener('click', (e) => {
-    e.preventDefault();
-    currentVisibleCount += ITEMS_PER_PAGE;
-    updatePublicationsDisplay();
-  });
+  // --- EVENT LISTENERS ---
 
+  // Handle clicking the "Show More" button
+  if (btnShowMore) {
+    btnShowMore.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentVisibleCount += ITEMS_PER_PAGE; // Add 5 more to the limit
+      renderPublications();
+    });
+  }
+
+  // Handle clicking the category filter buttons
   filterButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      
+      // Update the orange 'active' styling on the buttons
       filterButtons.forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
+      btn.classList.add('active');
 
-      activeFilter = e.target.getAttribute('data-filter');
-      currentVisibleCount = ITEMS_PER_PAGE; // Reset baseline count threshold rules on type switch
-      updatePublicationsDisplay();
+      // Figure out which category was clicked, forced to lowercase for safe matching
+      const btnText = btn.textContent.trim().toLowerCase();
+      
+      if (btnText.startsWith('all')) {
+        activeFilter = 'all';
+      } else {
+        activeFilter = btnText;
+      }
+
+      // Reset the page count back to 5 every time they switch tabs
+      currentVisibleCount = ITEMS_PER_PAGE; 
+      renderPublications();
     });
   });
 
-  // Run initial presentation logic render sequence
-  updatePublicationsDisplay();
+  // Run the function once immediately when the page loads
+  renderPublications();
 });
-   
+//-----------------------------------------------
 </script>
 </body>
 </html>
