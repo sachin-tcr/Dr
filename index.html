@@ -562,6 +562,30 @@ border: 1px solid var(--border);
 color: var(--text-muted);
 }
 
+/* publicationshowmore */
+.pub-filter.active {
+  background-color: var(--accent, #38bdf8);
+  color: #fff;
+  border-color: var(--accent, #38bdf8);
+}
+
+.btn-show-more {
+  padding: 0.7rem 2.5rem;
+  border: 1.5px solid var(--border, #252d3d);
+  background: var(--surface, #1a1f2e);
+  color: var(--text, #e8ecf4);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-show-more:hover {
+  border-color: var(--accent, #38bdf8);
+  color: var(--accent, #38bdf8);
+  transform: translateY(-1px);
+}
 /* ===== PATENTS ===== */
 .patents-stats {
 display: flex; gap: 2rem; margin-bottom: 2.5rem;
@@ -1659,6 +1683,9 @@ document.getElementById('gallery').addEventListener('mouseenter', () => clearInt
 </div>
 </div>
 </div>
+   <div class="pub-actions" style="display: flex; justify-content: center; margin-top: 2.5rem; width: 100%;">
+  <button class="btn-show-more" id="btnShowMore">Show More</button>
+</div>
 </section>
 
 <!-- ===== PATENTS ===== -->
@@ -2103,6 +2130,73 @@ const navbar = document.querySelector('.navbar');
     }
   });
 // -------------------------------------------
+   //show more
+document.addEventListener("DOMContentLoaded", () => {
+  const ITEMS_PER_PAGE = 5; 
+  let currentVisibleCount = ITEMS_PER_PAGE;
+  let activeFilter = 'all';
+
+  const pubListContainer = document.querySelector('.pub-list');
+  const btnShowMore = document.getElementById('btnShowMore');
+  const filterButtons = document.querySelectorAll('.pub-filter');
+
+  // Clone and preserve the original 41 list nodes on load
+  const allPublicationElements = Array.from(document.querySelectorAll('.pub-item'));
+
+  function updatePublicationsDisplay() {
+    // Clear out current DOM layout container view
+    pubListContainer.innerHTML = '';
+
+    // Filter items based on the data-filter attribute
+    const filteredElements = allPublicationElements.filter(item => {
+      if (activeFilter === 'all') return true;
+      const tagElement = item.querySelector('.pub-tag');
+      return tagElement && tagElement.textContent.trim().toLowerCase() === activeFilter.toLowerCase();
+    });
+
+    // Splice the active segment out of memory array chunk 
+    const itemsToDisplay = filteredElements.slice(0, currentVisibleCount);
+    
+    itemsToDisplay.forEach((item, index) => {
+      // Clean up index indicators dynamically based on real visible filters order
+      const numDiv = item.querySelector('.pub-num');
+      if (numDiv) {
+        numDiv.textContent = `#${filteredElements.length - index}`;
+      }
+      pubListContainer.appendChild(item);
+    });
+
+    // Toggle button layout visibility rule logic safely
+    if (currentVisibleCount >= filteredElements.length) {
+      btnShowMore.style.setProperty('display', 'none', 'important');
+    } else {
+      btnShowMore.style.setProperty('display', 'block', 'important');
+    }
+  }
+
+  // Action event execution handling rules
+  btnShowMore.addEventListener('click', (e) => {
+    e.preventDefault();
+    currentVisibleCount += ITEMS_PER_PAGE;
+    updatePublicationsDisplay();
+  });
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      filterButtons.forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+
+      activeFilter = e.target.getAttribute('data-filter');
+      currentVisibleCount = ITEMS_PER_PAGE; // Reset baseline count threshold rules on type switch
+      updatePublicationsDisplay();
+    });
+  });
+
+  // Run initial presentation logic render sequence
+  updatePublicationsDisplay();
+});
+   
 </script>
 </body>
 </html>
